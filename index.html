@@ -19,62 +19,37 @@
 </head>
 
 <body>
-    <!-- <div class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
-        <div class="absolute top-1/2 left-[max(-7rem,calc(50%-52rem))] -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
-            <div class="aspect-577/310 w-[36.0625rem] bg-linear-to-r from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"></div>
+    <nav class="bg-green-600 p-4 bg-transparent backdrop-blur fixed w-full z-10">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="hidden md:flex space-x-4">
+            <a href="./pages/product.html" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Produk</a>
+            <a href="./pages/supplier.html" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Supplier</a>
+            <a href="./pages/login.html" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Log in</a>
+            <a href="./pages/signup.html" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Daftar</a>
+            <a href="#" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2"><i class="fas fa-bell"></i></a>
         </div>
-        <div class="absolute top-1/2 left-[max(45rem,calc(50%+8rem))] -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
-            <div class="aspect-577/310 w-[36.0625rem] bg-linear-to-r from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"></div>
+        <button class="md:hidden text-white bg-green-600 rounded-full focus:outline-none" id="navbar-toggle">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path>
+    </svg>
+        </button>
+        <div class="flex items-center">
+            <a href="../index.html" class="flex items-center">
+                <img src="../assets/img/logo.jpeg" width="30" height="30" alt="Logo" class="mr-2">
+                <span class="text-white bg-green-600 rounded px-6 font-bold text-xl">AFISH</span>
+            </a>
         </div>
-        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <p class="text-sm/6 text-gray-900">
-            <strong class="font-semibold">Afish 2025</strong><svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Entrepreneurship Program Batch – 10 to see what’s coming next.
-            </p>
-            <a href="#" class="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">Register now <span aria-hidden="true">&rarr;</span></a>
-        </div>
-        <div class="flex flex-1 justify-end">
-            <button type="button" class="-m-3 p-3 focus-visible:outline-offset-[-4px]">
-            <span class="sr-only">Dismiss</span>
-            <svg class="size-5 text-gray-900" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
-            </svg>
-            </button>
-        </div>
-    </div> -->
-
-    <nav class="bg-green-600 p-4 bg-transparent backdrop-blur p-4 fixed w-full z-10">
-        <div class="container mx-auto flex justify-between items-center">
-            
-            <div class="hidden md:flex space-x-4">
-                
-                <a href="./assets/Product.html" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2 rounded">Produk</a>
-                <a href="./assets/Supplier.html" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2 rounded">Supplier</a>
-                <a href="./assets/login/login.html" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2 rounded">Log in</a>
-                <a href="./assets/login/login.html" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2 rounded">Daftar</a>
-                <a href="#" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2 rounded"><i class="fas fa-shopping-cart"></i></a>
-                <a href="#" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2 rounded"><i class="fas fa-bell"></i></a>
-            </div>
-            <button class="md:hidden text-white bg-green-600 rounded-full focus:outline-none" id=6navbar-toggl2">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-            <div class="flex items-center">
-                <a href="#" class="flex items-center">
-                    <img src="./assets/img/logo.jpeg" width="30" height="30" alt="Logo" class="mr-2">
-                    <span class="text-white bg-green-600 rounded px-6 font-bold text-xl">AFISH</span>
-                </a>
-            </div>
-        </div>
-        <div class="md:hidden" id="navbar-menu">
-            <a href="./assets/Product.html" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Produk</a>
-            <a href="./assets/Supplier.html" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Supplier</a>
-            <a href="#" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2"><i class="fas fa-shopping-cart"></i></a>
-            <a href="#" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2"><i class="fas fa-bell"></i></a>
-            <a href="./assets/login/login.html" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Log in</a>
-            <a href="./assets/login/login.html" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Daftar</a>
-        </div>
-    </nav>
+    </div>
+    <div class="hidden md:hidden flex-col space-y-4 mt-4" id="navbar-menu">
+        <a href="./assets/Product.html" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Produk</a>
+        <a href="./assets/Supplier.html" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Supplier</a>
+        <a href="#" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2"><i class="fas fa-shopping-cart"></i></a>
+        <a href="#" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2"><i class="fas fa-bell"></i></a>
+        <a href="./assets/login/login.html" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Log in</a>
+        <a href="./assets/login/login.html" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Daftar</a>
+    </div>
+</nav>
 <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
     <img src="./assets/img/background.jpg" alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center">
     <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
@@ -377,52 +352,46 @@
         </div>
         </div>
 
-        <div class="relative isolate overflow-hidden bg-green-900 py-16 sm:py-24 lg:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-        <div class="max-w-xl lg:max-w-lg">
-            <h2 class="text-4xl font-semibold tracking-tight text-white">Subscribe to our newsletter</h2>
-            <p class="mt-4 text-lg text-gray-300">Feel free to get more info and guide from us</p>
-            <div class="mt-6 flex max-w-md gap-x-4">
-            <label for="email-address" class="sr-only">Email address</label>
-            <input id="email-address" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-green-500 sm:text-sm/6" placeholder="Enter your email">
-            <button type="submit" class="flex-none rounded-md bg-green-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-green-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500">Subscribe</button>
+    <div class="relative isolate overflow-hidden bg-green-900 py-16 sm:py-24 lg:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+            <div class="max-w-xl lg:max-w-lg">
+                <h2 class="text-4xl font-semibold tracking-tight text-white">Subscribe to our newsletter</h2>
+                <p class="mt-4 text-lg text-gray-300">Feel free to get more info and guide from us</p>
+                <div class="mt-6 flex max-w-md gap-x-4">
+                <label for="email-address" class="sr-only">Email address</label>
+                <input id="email-address" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-green-500 sm:text-sm/6" placeholder="Enter your email">
+                <button type="submit" class="flex-none rounded-md bg-green-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-green-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500">Subscribe</button>
+                </div>
             </div>
+            <dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
+                <div class="flex flex-col items-start">
+                <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+                    <i class="fas fa-map text-white"></i>
+                </div>
+                <dt class="mt-4 text-base font-semibold text-white">ADDRESS</dt>
+                    <dd class="mt-2 text-base/7 text-white">Fakultas Teknik Sistem Informasi</dd>
+                    <dd class="mt-2 text-base/7 text-white">Universitas Malikussaleh</dd>
+                    <dd class="mt-2 text-base/7 text-white">Kampus Bukit Indah</dd>
+                    <dd class="mt-2 text-base/7 text-white">Jl. Batam Kampus Unimal Bukit Indah, Muara Batu, Aceh Utara, Indonesia</dd>
+                </div>
+                <div class="flex flex-col items-start">
+                <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+                    <i class="fas fa-users text-white"></i>
+                </div>
+                <dt class="mt-4 text-base font-semibold text-white">OUR SOCIAL MEDIA</dt>
+                <dd class="mt-2 text-base/7 text-white"><a href="https://github.com/hazhyni" target="_blank"><i class="fab fa-github"></i> Github </a></dd>
+                <dd class="mt-2 text-base/7 text-white"><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube </a></dd>
+                <dd class="mt-2 text-base/7 text-white"><a href="https://linkedin.com/in/hazhiyah" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn </a> </dd>
+                <dd class="mt-2 text-base/7 text-white"><a href="mailto:hazhiyahy@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Gmail</a></dd>
+
+
+                </div>
+            </dl>
+            </div>
+            <p class="text-1xl font-italic tracking-tight text-white"><i class="fas fa-copyright"></i> Copyright Afish Universitas Malikussaleh - 2021</i></p>
+            
         </div>
-        <dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
-            <div class="flex flex-col items-start">
-            <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-                <i class="fas fa-map text-white"></i>
-            </div>
-            <dt class="mt-4 text-base font-semibold text-white">ADDRESS</dt>
-                <dd class="mt-2 text-base/7 text-white">Fakultas Teknik Sistem Informasi</dd>
-                <dd class="mt-2 text-base/7 text-white">Universitas Malikussaleh</dd>
-                <dd class="mt-2 text-base/7 text-white">Kampus Bukit Indah</dd>
-                <dd class="mt-2 text-base/7 text-white">Jl. Batam Kampus Unimal Bukit Indah, Muara Batu, Aceh Utara, Indonesia</dd>
-            </div>
-            <div class="flex flex-col items-start">
-            <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-                <i class="fas fa-users text-white"></i>
-            </div>
-            <dt class="mt-4 text-base font-semibold text-white">OUR SOCIAL MEDIA</dt>
-            <dd class="mt-2 text-base/7 text-white"><a href="https://github.com/hazhyni" target="_blank"><i class="fab fa-github"></i> Github </a></dd>
-            <dd class="mt-2 text-base/7 text-white"><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube </a></dd>
-            <dd class="mt-2 text-base/7 text-white"><a href="https://linkedin.com/in/hazhiyah" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn </a> </dd>
-            <dd class="mt-2 text-base/7 text-white"><a href="mailto:hazhiyahy@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Gmail</a></dd>
-
-
-            </div>
-        </dl>
-        </div>
-        <p class="text-1xl font-italic tracking-tight text-white"><i class="fas fa-copyright"></i> Copyright Afish Universitas Malikussaleh - 2021</i></p>
-        
-    </div>
-    
-
-
-    <div class="copyright text-center text-white font-width-bold bg-success p-2">
-        <p>
-        </p>
     </div>
 
     <script>

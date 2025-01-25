@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/script.js"></script>
+
+    
+    <link rel="stylesheet"
+      href="../assets/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/sosial.css">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>Product</title>
+    <style>
+        .card {
+            position: relative;
+            overflow: hidden;
+            width: 300px; /* Set a fixed width for the cards */
+            height: 200px; /* Set a fixed height for the cards */
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s ease;
+        }
+        .card:hover .overlay {
+            opacity: 1; /* Show overlay on hover */
+        }
+    </style>
+  </head>
+
+  <body>
+    <nav
+      class="bg-green-600 p-4 bg-transparent backdrop-blur fixed w-full z-10">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="hidden md:flex space-x-4">
+          <a href="./product.html"
+            class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Produk</a>
+          <a href="./supplier.html"
+            class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Supplier</a>
+          <a href="./login.html"
+            class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Log
+            in</a>
+          <a href="./signup.html"
+            class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Daftar</a>
+          <a href="#"
+            class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2"><i
+              class="fas fa-shopping-cart"></i></a>
+          <a href="#"
+            class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2"><i
+              class="fas fa-bell"></i></a>
+        </div>
+        <button
+          class="md:hidden text-white bg-green-600 rounded-full focus:outline-none"
+          id="navbar-toggle">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+        <div class="flex items-center">
+          <a href="../index.html" class="flex items-center">
+            <img src="../assets/img/logo.jpeg" width="30" height="30" alt="Logo"
+              class="mr-2">
+            <span
+              class="text-white bg-green-600 rounded px-6 font-bold text-xl">AFISH</span>
+          </a>
+        </div>
+      </div>
+      <div class="hidden md:hidden flex-col space-y-4 mt-4" id="navbar-menu">
+        <a href="./assets/Product.html"
+          class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Produk</a>
+        <a href="./assets/Supplier.html"
+          class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Supplier</a>
+        <a href="#"
+          class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2"><i
+            class="fas fa-shopping-cart"></i></a>
+        <a href="#"
+          class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2"><i
+            class="fas fa-bell"></i></a>
+        <a href="./assets/login/login.html"
+          class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Log
+          in</a>
+        <a href="./assets/login/login.html"
+          class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Daftar</a>
+      </div>
+    </nav>
+
+    <div class="relative bg-white">
+      <!-- Hero Section -->
+      <div
+        class="relative bg-gray-200 h-[500px] flex items-center justify-center">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold text-gray-800">Mid-Season Sale</h1>
+          <button id="shopButton"
+            class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-500">Shop
+            Collection</button>
+        </div>
+      </div>
+
+      <!-- Overlapping Image Tiles -->
+      <div id="imageTiles"
+        class="relative z-10 -mt-20 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-6xl mx-auto px-4">
+        <!-- Tile 1 -->
+        <div class="card relative w-full h-80 bg-cover bg-center"
+          style="background-image: url('../assets/img/kebunteh.jpg');">
+          <div class="overlay text-center text-white">
+            <h3 class="text-lg font-semibold">Desk and Office</h3>
+            <p class="text-base">Work from home accessories</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+
+          <img src="../assets/img/kebunteh.jpg" alt="Woman"
+            class="w-full h-64 object-cover">
+          <div class="p-4">
+            <p class="text-center text-gray-700 font-medium">Shop the
+              collection</p>
+          </div>
+        </div>
+
+        <!-- Tile 2 -->
+        <div class="card relative w-full h-80 bg-cover bg-center"
+          style="background-image: url('../assets/img/kebunteh.jpg');">
+          <div class="overlay text-center text-white">
+            <h3 class="text-lg font-semibold">Desk and Office</h3>
+            <p class="text-base">Work from home accessories</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+
+    <section class="py-24 relative">
+      <div class="w-full max-w-7xl mx-auto px-4 md:px-8">
+        <div
+          class="flex flex-col lg:flex-row lg:items-center max-lg:gap-4 justify-between w-full">
+          <ul
+            class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-12">
+            <li class="flex items-center cursor-pointer outline-none group">
+              <i class="fas fa-utensil-spoon text-green-600 font-bold text-lg"></i>
+              <span
+                class="font-normal text-lg leading-8 text-green-600 ml-2 mr-3 transition-all duration-500 group-hover:text-green-600">Pertanian</span>
+              <button
+                class="flex aspect-square h-6 rounded-full border border-green-600  items-center justify-center font-manrope font-medium text-base text-green-600  transition-all duration-500 group-hover:border-green-600 group-hover:text-green-600">8</button>
+
+            </li>
+
+            <li class="flex items-center cursor-pointer outline-none group">
+              <i class="fab fa-raspberry-pi text-green-600 font-bold text-lg"></i>
+              <span
+                class="font-normal text-lg leading-8 text-black pl-2 pr-3 transition-all duration-500 group-hover:text-green-600">Perkebunan</span>
+              <span
+                class="w-6 h-6 rounded-full border border-gray-900 flex items-center justify-center font-manrope font-medium text-base text-gray-900 transition-all duration-500 group-hover:border-green-600 group-hover:text-green-600">3</span>
+            </li>
+
+            <li class="flex items-center cursor-pointer outline-none group">
+              <i class="fas fa-fish text-green-600 font-bold text-lg"></i>
+              <span
+                class="font-normal text-lg leading-8 text-black pl-2 pr-3 transition-all duration-500 group-hover:text-green-600">Perikanan</span>
+              <span
+                class="w-6 h-6 rounded-full border border-gray-900 flex items-center justify-center font-manrope font-medium text-base text-gray-900 transition-all duration-500 group-hover:border-green-600 group-hover:text-green-600">1</span>
+            </li>
+          </ul>
+          <div class="relative w-full max-w-sm">
+            <svg class="absolute top-1/2 -translate-y-1/2 left-4 z-50"
+              width="20" height="20"
+              viewBox="0 0 20 20" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.5555 3.33203H3.44463C2.46273 3.33203 1.66675 4.12802 1.66675 5.10991C1.66675 5.56785 1.84345 6.00813 2.16004 6.33901L6.83697 11.2271C6.97021 11.3664 7.03684 11.436 7.0974 11.5068C7.57207 12.062 7.85127 12.7576 7.89207 13.4869C7.89728 13.5799 7.89728 13.6763 7.89728 13.869V16.251C7.89728 17.6854 9.30176 18.6988 10.663 18.2466C11.5227 17.961 12.1029 17.157 12.1029 16.251V14.2772C12.1029 13.6825 12.1029 13.3852 12.1523 13.1015C12.2323 12.6415 12.4081 12.2035 12.6683 11.8158C12.8287 11.5767 13.0342 11.3619 13.4454 10.9322L17.8401 6.33901C18.1567 6.00813 18.3334 5.56785 18.3334 5.10991C18.3334 4.12802 17.5374 3.33203 16.5555 3.33203Z"
+                stroke="black" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+            <select id="Offer"
+              class="h-12 border border-gray-300 text-gray-900 pl-11 text-base font-normal leading-7 rounded-full block w-full py-2.5 px-4 appearance-none relative focus:outline-none bg-white transition-all duration-500 hover:border-gray-400 hover:bg-gray-50 focus-within:bg-gray-50">
+              <option selected>Sort by time(high to low)</option>
+              <option value="option 1">option 1</option>
+              <option value="option 2">option 2</option>
+              <option value="option 3">option 3</option>
+              <option value="option 4">option 4</option>
+            </select>
+            <svg class="absolute top-1/2 -translate-y-1/2 right-4 z-50"
+              width="16" height="16"
+              viewBox="0 0 16 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.0002 5.99845L8.00008 9.99862L3.99756 5.99609"
+                stroke="#111827" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+        <svg class="my-7 w-full" xmlns="http://www.w3.org/2000/svg"
+          width="1216" height="2" viewBox="0 0 1216 2"
+          fill="none">
+          <path d="M0 1H1216" stroke="#E5E7EB" />
+        </svg>
+        <div class="grid grid-cols-12">
+          <div
+            class="col-span-12 md:col-span-3 w-full max-md:max-w-md max-md:mx-auto">
+            <div
+              class="box rounded-xl border border-gray-300 bg-white p-6 w-full md:max-w-sm">
+              <h6 class="font-medium text-base leading-7 text-black mb-5">All Categories</h6>
+              <div class="flex items-center mb-5 gap-1">
+                <div class="relative w-full">
+                  <select id="FROM"
+                    class="h-12 border border-gray-300 text-gray-900 text-xs font-medium rounded-full block w-full py-2.5 px-4 appearance-none relative focus:outline-none bg-white">
+                    <option selected>Min</option>
+                    <option value="option 1">option 1</option>
+                    <option value="option 2">option 2</option>
+                    <option value="option 3">option 3</option>
+                    <option value="option 4">option 4</option>
+                  </select>
+                  <svg class="absolute top-1/2 -translate-y-1/2 right-4 z-50"
+                    width="16" height="16"
+                    viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.0002 5.99845L8.00008 9.99862L3.99756 5.99609"
+                      stroke="#111827"
+                      stroke-width="1.6" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <p
+                  class="px-1 font-normal text-sm leading-6 text-gray-600">to</p>
+                <div class="relative w-full">
+                  <select id="FROM"
+                    class="h-12 border border-gray-300 text-gray-900 text-xs font-medium rounded-full block w-full py-2.5 px-4 appearance-none relative focus:outline-none bg-white">
+                    <option selected>Max</option>
+                    <option value="option 1">option 1</option>
+                    <option value="option 2">option 2</option>
+                    <option value="option 3">option 3</option>
+                    <option value="option 4">option 4</option>
+                  </select>
+                  <svg class="absolute top-1/2 -translate-y-1/2 right-4 z-50"
+                    width="16" height="16"
+                    viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.0002 5.99845L8.00008 9.99862L3.99756 5.99609"
+                      stroke="#111827"
+                      stroke-width="1.6" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+
+              <label for="countries"
+                class="block mb-2 text-sm font-medium text-gray-600 w-full">Zip
+                Code</label>
+              <div class="relative w-full mb-8">
+                <select id="FROM"
+                  class="h-12 border border-gray-300 text-gray-900 text-xs font-medium rounded-full block w-full py-2.5 px-4 appearance-none relative focus:outline-none bg-white">
+                  <option selected>Write code</option>
+                  <option value="option 1">option 1</option>
+                  <option value="option 2">option 2</option>
+                  <option value="option 3">option 3</option>
+                  <option value="option 4">option 4</option>
+                </select>
+                <svg class="absolute top-1/2 -translate-y-1/2 right-4 z-50"
+                  width="16" height="16"
+                  viewBox="0 0 16 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.0002 5.99845L8.00008 9.99862L3.99756 5.99609"
+                    stroke="#111827"
+                    stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <button
+                class="w-full py-2.5 flex items-center justify-center gap-2 rounded-full bg-green-600 text-white font-semibold text-xs shadow-sm shadow-transparent transition-all duration-500 hover:bg-green-700 hover:shadow-green-200  ">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14.4987 13.9997L13.1654 12.6663M13.832 7.33301C13.832 10.6467 11.1457 13.333 7.83203 13.333C4.51832 13.333 1.83203 10.6467 1.83203 7.33301C1.83203 4.0193 4.51832 1.33301 7.83203 1.33301C11.1457 1.33301 13.832 4.0193 13.832 7.33301Z"
+                    stroke="white" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                Search
+              </button>
+            </div>
+
+            <div
+              class="mt-7 box rounded-xl border border-gray-300 bg-white p-6 w-full md:max-w-sm">
+              <div
+                class="flex items-center justify-between w-full pb-3 border-b border-gray-200 mb-7">
+                <p class="font-medium text-base leading-7 text-black ">Filter</p>
+                <p
+                  class="font-medium text-xs text-gray-500 cursor-pointer transition-all duration-500 hover:text-green-600">
+                  RESET</p>
+              </div>
+
+              <div class="w-full mb-7">
+                <div class='accordion-group grid grid-cols-1 gap-5 sm:gap-9'
+                  data-accordion="default-accordion">
+                  <div class='accordion '
+                    id='category-heading-one'>
+                    <button
+                      class='accordion-toggle group accordion-active:text-green-600 inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-green-600 active:text-green-600'
+                      aria-controls='category-collapse-one'>
+                      <h5 class="font-medium text-sm text-gray-900">
+                        Availability
+                      </h5>
+                      <svg
+                        class='text-gray-900 transition duration-500 group-hover:text-green-600 accordion-active:text-green-600 accordion-active:rotate-180'
+                        width='22' height='22' viewBox='0 0 22 22' fill='none'
+                        xmlns='http://www.w3.org/2000/svg'>
+                        <path
+                          d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
+                          stroke='currentColor' stroke-width='1.6'
+                          stroke-linecap='round'
+                          stroke-linejoin='round'></path>
+                      </svg>
+
+                    </button>
+                    <div id='category-collapse-one'
+                      class='accordion-content w-full px-0 overflow-hidden pr-4 max-h-0 '
+                      aria-labelledby='category-heading-one'>
+
+                      <div class="box flex flex-col gap-2 mt-5">
+
+                        <div class="flex items-center mb-2">
+                          <input id="checkbox-option-1" type="checkbox" value
+                            class="checkbox-white w-5 h-5 appearance-none border border-gray-500  rounded mr-1 hover:border-green-100 hover:bg-green-600 checked:bg-no-repeat checked:bg-center checked:border-green-100 checked:bg-green-600 checked:bg-[url('https://pagedone.io/asset/uploads/1689406942.svg')]">
+                          <label for="checkbox-option-1"
+                            class="ml-1 font-normal text-xs cursor-pointer  text-gray-600">option-1</label>
+                        </div>
+                        <div class="flex items-center mb-2">
+                          <input id="checkbox-option-2" type="checkbox" value
+                            class="checkbox-white w-5 h-5 appearance-none border border-gray-500  rounded mr-1 hover:border-green-100 hover:bg-green-600 checked:bg-no-repeat checked:bg-center checked:border-green-600 checked:bg-green-100 checked:bg-[url('https://pagedone.io/asset/uploads/1689406942.svg')]">
+                          <label for="checkbox-option-2"
+                            class="ml-1 font-normal text-xs cursor-pointer  text-gray-600">option-2</label>
+                        </div>
+                        <div class="flex items-center mb-2">
+                          <input id="checkbox-option-3" type="checkbox" value
+                            class="checkbox-white w-5 h-5 appearance-none border border-gray-500  rounded mr-1 hover:border-green-600 hover:bg-green-600 checked:bg-no-repeat checked:bg-center checked:border-green-600 checked:bg-green-100 checked:bg-[url('https://pagedone.io/asset/uploads/1689406942.svg')]">
+                          <label for="checkbox-option-3"
+                            class="ml-1 font-normal text-xs cursor-pointer  text-gray-600">option-3</label>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <label for="Offer"
+                class="font-medium text-sm leading-6 text-gray-600 mb-1">Offer</label>
+              <div class="relative w-full mb-7">
+                <select id="Offer"
+                  class="h-12 border border-gray-300 text-gray-900 text-xs font-medium rounded-full block w-full py-2.5 px-4 appearance-none relative focus:outline-none bg-white">
+                  <option selected>5% off upi discount</option>
+                  <option value="option 1">option 1</option>
+                  <option value="option 2">option 2</option>
+                  <option value="option 3">option 3</option>
+                  <option value="option 4">option 4</option>
+                </select>
+                <svg class="absolute top-1/2 -translate-y-1/2 right-4 z-50"
+                  width="16" height="16"
+                  viewBox="0 0 16 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.0002 5.99845L8.00008 9.99862L3.99756 5.99609"
+                    stroke="#111827"
+                    stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <p
+                class="font-medium text-sm leading-6 text-black mb-3">Discount</p>
+              <div class="box flex flex-col gap-2">
+                <div class="flex items-center">
+                  <input id="checkbox-default-1" type="checkbox" value
+                    class="w-5 h-5 appearance-none border border-gray-300  rounded-md mr-2 hover:border-green-500 hover:bg-green-100 checked:bg-no-repeat checked:bg-center checked:border-green-500 checked:bg-green-100 checked:bg-[url('https://pagedone.io/asset/uploads/1689406942.svg')]">
+                  <label for="checkbox-default-1"
+                    class="text-xs font-normal text-gray-600 leading-4 cursor-pointer">20%
+                    or more</label>
+                </div>
+                <div class="flex items-center">
+                  <input id="checkbox-default-2" type="checkbox" value
+                    class="w-5 h-5 appearance-none border border-gray-300  rounded-md mr-2 hover:border-green-500 hover:bg-green-100 checked:bg-no-repeat checked:bg-center checked:border-green-500 checked:bg-green-100 checked:bg-[url('https://pagedone.io/asset/uploads/1689406942.svg')]">
+                  <label for="checkbox-default-2"
+                    class="text-xs font-normal text-gray-600 leading-4 cursor-pointer">30%
+                    or more</label>
+                </div>
+                <div class="flex items-center">
+                  <input id="checkbox-default-3" type="checkbox" value
+                    class="w-5 h-5 appearance-none border border-gray-300  rounded-md mr-2 hover:border-green-500 hover:bg-green-100 checked:bg-no-repeat checked:bg-center checked:border-green-500 checked:bg-green-100 checked:bg-[url('https://pagedone.io/asset/uploads/1689406942.svg')]">
+                  <label for="checkbox-default-3"
+                    class="text-xs font-normal text-gray-600 leading-4 cursor-pointer">50%
+                    or more</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-3 md:col-span-3 px-2">
+            <div class="group relative px-5 py-5">
+                <img src="../assets/img/padi.jpg" alt="Rice" class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
+                <div class="overlay">
+                    <a href="#" class="inline-block rounded-md bg-green-600 px-3 py-1 text-sm font-semibold text-white hover:bg-green-700">+ <i class="fas fa-shopping-cart"></i></a>
+                </div>
+                <div class="mt-4 flex justify-between">
+                <div>
+                    <h3 class="text-sm text-gray-700">
+                    <a href="#">
+                        <span aria-hidden="true" class="absolute inset-0"></span>
+                        Premium Rice
+                    </a>
+                    </h3>
+                    <p class="mt-1 text-sm text-gray-500">Aceh Industri</p>
+                </div>
+                <p class="text-sm font-medium text-gray-900">Rp.70.000</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-span-3 md:col-span-3 px-2">
+            <div class="group relative px-5 py-5">
+                <img src="../assets/img/padi.jpg" alt="Rice" class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
+                <div class="overlay">
+                    <a href="#" class="inline-block rounded-md bg-green-600 px-3 py-1 text-sm font-semibold text-white hover:bg-green-700">+ <i class="fas fa-shopping-cart"></i></a>
+                </div>
+                <div class="mt-4 flex justify-between">
+                <div>
+                    <h3 class="text-sm text-gray-700">
+                    <a href="#">
+                        <span aria-hidden="true" class="absolute inset-0"></span>
+                        Premium Rice
+                    </a>
+                    </h3>
+                    <p class="mt-1 text-sm text-gray-500">Aceh Industri</p>
+                </div>
+                <p class="text-sm font-medium text-gray-900">Rp.70.000</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-span-3 md:col-span-3 px-2">
+            <div class="group relative px-5 py-5">
+                <img src="../assets/img/padi.jpg" alt="Rice" class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
+                <div class="overlay">
+                    <a href="#" class="inline-block rounded-md bg-green-600 px-3 py-1 text-sm font-semibold text-white hover:bg-green-700">+ <i class="fas fa-shopping-cart"></i></a>
+                </div>
+                <div class="mt-4 flex justify-between">
+                <div>
+                    <h3 class="text-sm text-gray-700">
+                    <a href="#">
+                        <span aria-hidden="true" class="absolute inset-0"></span>
+                        Premium Rice
+                    </a>
+                    </h3>
+                    <p class="mt-1 text-sm text-gray-500">Aceh Industri</p>
+                </div>
+                <p class="text-sm font-medium text-gray-900">Rp.70.000</p>
+                </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+      <div
+        class="relative isolate overflow-hidden bg-green-900 py-16 sm:py-24 lg:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div
+            class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+            <div class="max-w-xl lg:max-w-lg">
+              <h2
+                class="text-4xl font-semibold tracking-tight text-white">Subscribe
+                to our newsletter</h2>
+              <p class="mt-4 text-lg text-gray-300">Feel free to get more info
+                and guide from us</p>
+              <div class="mt-6 flex max-w-md gap-x-4">
+                <label for="email-address" class="sr-only">Email address</label>
+                <input id="email-address" name="email" type="email"
+                  autocomplete="email" required
+                  class="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-green-500 sm:text-sm/6"
+                  placeholder="Enter your email">
+                <button type="submit"
+                  class="flex-none rounded-md bg-green-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-green-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500">Subscribe</button>
+              </div>
+            </div>
+            <dl
+              class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
+              <div class="flex flex-col items-start">
+                <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+                  <i class="fas fa-map text-white"></i>
+                </div>
+                <dt class="mt-4 text-base font-semibold text-white">ADDRESS</dt>
+                <dd class="mt-2 text-base/7 text-white">Fakultas Teknik Sistem
+                  Informasi</dd>
+                <dd class="mt-2 text-base/7 text-white">Universitas
+                  Malikussaleh</dd>
+                <dd class="mt-2 text-base/7 text-white">Kampus Bukit Indah</dd>
+                <dd class="mt-2 text-base/7 text-white">Jl. Batam Kampus Unimal
+                  Bukit Indah, Muara Batu, Aceh Utara, Indonesia</dd>
+              </div>
+              <div class="flex flex-col items-start">
+                <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+                  <i class="fas fa-users text-white"></i>
+                </div>
+                <dt class="mt-4 text-base font-semibold text-white">OUR SOCIAL
+                  MEDIA</dt>
+                <dd class="mt-2 text-base/7 text-white"><a
+                    href="https://github.com/hazhyni" target="_blank"><i
+                      class="fab fa-github"></i> Github </a></dd>
+                <dd class="mt-2 text-base/7 text-white"><a
+                    href="https://youtube.com" target="_blank"><i
+                      class="fab fa-youtube"></i> YouTube </a></dd>
+                <dd class="mt-2 text-base/7 text-white"><a
+                    href="https://linkedin.com/in/hazhiyah" target="_blank"><i
+                      class="fab fa-linkedin"></i> LinkedIn </a> </dd>
+                <dd class="mt-2 text-base/7 text-white"><a
+                    href="mailto:hazhiyahy@gmail.com" target="_blank"><i
+                      class="fas fa-envelope"></i> Gmail</a></dd>
+              </div>
+            </dl>
+          </div>
+          <p class="text-1xl font-italic tracking-tight text-white"><i
+              class="fas fa-copyright"></i> Copyright Afish Universitas
+            Malikussaleh - 2021</i></p>
+      </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/f05c8837f2.js"
+      crossorigin="anonymous"></script>
+    <script
+      src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script src="../assets/fontawesome-free-5.15.4-web/js/all.min.js"></script>
+    <script src="../assets/script.js"></script>
+  </body>
+
+</html>

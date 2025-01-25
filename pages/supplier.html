@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/script.js"></script>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
+
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/sosial.css">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="../assets/slider.css">
+
+    <title>Supplier</title>
+</head>
+
+<body>
+    <div id="banner" class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+        <!-- Background shapes -->
+        <div class="absolute top-1/2 left-[max(-7rem,calc(50%-52rem))] -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
+            <div class="aspect-577/310 w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"></div>
+        </div>
+        <div class="absolute top-1/2 left-[max(45rem,calc(50%+8rem))] -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
+            <div class="aspect-577/310 w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"></div>
+        </div>
+        <!-- Content -->
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <p class="text-sm/6 text-gray-900">
+            <strong class="font-semibold">Afish 2025</strong>
+            <svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true">
+            <circle cx="1" cy="1" r="1" />
+            </svg>
+            Join us in Entrepreneurship Program Batch – 10 to see what’s coming next.
+        </p>
+        <a href="#" class="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">
+            Register now <span aria-hidden="true">&rarr;</span>
+        </a>
+        </div>
+        <!-- Dismiss Button -->
+        <div class="flex flex-1 justify-end">
+        <button type="button" class="-m-3 p-3 focus-visible:outline-offset-[-4px]" onclick="closeBanner()">
+            <span class="sr-only">Dismiss</span>
+            <svg class="size-5 text-gray-900" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+            </svg>
+        </button>
+        </div>
+    </div>
+
+    <nav class="bg-green-600 p-4 bg-transparent backdrop-blur fixed w-full z-10">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="hidden md:flex space-x-4">
+            <a href="./product.html" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Produk</a>
+            <a href="./supplier.html" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Supplier</a>
+            <a href="./login.html" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Log in</a>
+            <a href="./signup.html" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Daftar</a>
+            <a href="#" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#" class="text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2"><i class="fas fa-bell"></i></a>
+        </div>
+        <button class="md:hidden text-white bg-green-600 rounded-full focus:outline-none" id="navbar-toggle">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"></path>
+    </svg>
+        </button>
+        <div class="flex items-center">
+            <a href="../index.html" class="flex items-center">
+                <img src="../assets/img/logo.jpeg" width="30" height="30" alt="Logo" class="mr-2">
+                <span class="text-white bg-green-600 rounded px-6 font-bold text-xl">AFISH</span>
+            </a>
+        </div>
+    </div>
+    <div class="hidden md:hidden flex-col space-y-4 mt-4" id="navbar-menu">
+        <a href="./assets/Product.html" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Produk</a>
+        <a href="./assets/Supplier.html" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Supplier</a>
+        <a href="#" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2"><i class="fas fa-shopping-cart"></i></a>
+        <a href="#" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2"><i class="fas fa-bell"></i></a>
+        <a href="./assets/login/login.html" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Log in</a>
+        <a href="./assets/login/login.html" class="block text-white bg-green-600 rounded-full hover:bg-green-700 px-6 py-2">Daftar</a>
+    </div>
+</nav>
+
+    
+    <div class="max-w-2xl px-4 py-16 sm:px-6 sm:py-20 lg:max-w-7xl lg:px-8 overflow-hidden bg-gray-900 py-24 sm:py-32">
+  <img src="../assets/img/background.jpg" alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center">
+  <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+    <div class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+  </div>
+  <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+    <div class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+  </div>
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto">
+      <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Trusted Local Supplier</h2>
+    </div>
+    <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+      <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+            <a href="#">How to be a Supplier <span aria-hidden="true">&rarr;</span></a>
+            <a href="#">Supplier Map <span aria-hidden="true">&rarr;</span></a>
+            <a href="#">Our Key Business <span aria-hidden="true">&rarr;</span></a>
+            <a href="#">Meet our Team <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="flex flex-col-reverse gap-1">
+            <dt class="text-base/7 text-gray-300">Farmers worldwide</dt>
+            <dd class="text-4xl font-semibold tracking-tight text-white">12</dd>
+            </div>
+            <div class="flex flex-col-reverse gap-1">
+            <dt class="text-base/7 text-gray-300">Agriculture</dt>
+            <dd class="text-4xl font-semibold tracking-tight text-white">300+</dd>
+            </div>
+            <div class="flex flex-col-reverse gap-1">
+            <dt class="text-base/7 text-gray-300">Plantation</dt>
+            <dd class="text-4xl font-semibold tracking-tight text-white">40</dd>
+            </div>
+            <div class="flex flex-col-reverse gap-1">
+            <dt class="text-base/7 text-gray-300">Fishery</dt>
+            <dd class="text-4xl font-semibold tracking-tight text-white">Unlimited</dd>
+            </div>
+        </dl>
+    </div>
+  </div>
+</div>
+
+    <div class="flex flex-col md:flex-row h-screen">
+    <!-- Sidebar -->
+    <div class="w-full md:w-1/4 bg-gray-100 p-4 space-y-4">
+      <div class="space-y-4">
+        <div 
+          class="flex items-center space-x-4 cursor-pointer" 
+          onclick="changeSupplier(0)">
+          <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+          <div>
+            <h4 class="text-lg font-medium">Supplier A</h4>
+            <p class="text-sm text-gray-500">Coffee Farmer</p>
+            <p class="text-sm text-gray-500">Location A</p>
+          </div>
+        </div>
+        <div 
+          class="flex items-center space-x-4 cursor-pointer" 
+          onclick="changeSupplier(1)">
+          <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+          <div>
+            <h4 class="text-lg font-medium">Supplier B</h4>
+            <p class="text-sm text-gray-500">Tea Grower</p>
+            <p class="text-sm text-gray-500">Location B</p>
+          </div>
+        </div>
+        <div 
+          class="flex items-center space-x-4 cursor-pointer" 
+          onclick="changeSupplier(2)">
+          <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+          <div>
+            <h4 class="text-lg font-medium">Supplier C</h4>
+            <p class="text-sm text-gray-500">Spice Producer</p>
+            <p class="text-sm text-gray-500">Location C</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Section -->
+    <div class="flex-1 bg-white p-8 space-y-8">
+      <!-- Promo Banner -->
+      <div class="bg-green-400 p-8 flex items-center justify-center rounded-lg">
+        <div class="text-center">
+          <div class="text-white text-5xl font-bold">TRUSTED SUPPLIER</div>
+        </div>
+      </div>
+
+      <!-- Supplier Description -->
+      <div class="space-y-4">
+        <h2 class="text-xl font-semibold">Supplier Description</h2>
+        <div id="supplier-description">
+          <!-- Supplier details will be dynamically updated here -->
+          <p class="text-gray-700" id="supplier-text">
+            Select a supplier to view their details.
+          </p>
+          <ul class="list-disc pl-5 text-gray-700" id="supplier-locations"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<div class="bg-gray-50 py-24 sm:py-32">
+    <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+    <h2 class="text-center text-lg text-base/7 font-semibold text-green-600">Trusted Supplier</h2>
+    <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-gray-950 sm:text-5xl">Everything you need provided by our supplier</p>
+    <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+        <div class="relative lg:row-span-2">
+        <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
+        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+            <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Trusted Supplier</p>
+            <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Before we start, research is a first thing we do to know our supplier</p>
+            </div>
+            <div class="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
+            <div class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                <img class="size-full object-cover object-top" src="../assets/img/background.jpg" alt="">
+            </div>
+            </div>
+        </div>
+        <div class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 lg:rounded-l-[2rem]"></div>
+        </div>
+        <div class="relative max-lg:row-start-1">
+        <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
+        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+            <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Commodities Checking</p>
+            <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">We dive in to continously check our products</p>
+            </div>
+            <div class="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
+            <img class="w-full max-lg:max-w-xs" src="../assets/img/padi.jpg" alt="">
+            </div>
+        </div>
+        <div class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 max-lg:rounded-t-[2rem]"></div>
+        </div>
+        <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+        <div class="absolute inset-px rounded-lg bg-white"></div>
+        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
+            <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Good Packaging</p>
+            <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">We choose the best way to package and making sure our commodities is well wrapped</p>
+            </div>
+            <div class="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
+            <img class="h-[min(152px,40cqw)] object-cover" src="../assets/img/kebunteh.jpg" alt="">
+            </div>
+        </div>
+        <div class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5"></div>
+        </div>
+        <div class="relative lg:row-span-2">
+        <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
+        <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
+            <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+            <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">High Quality Commodities</p>
+            <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Our team continously review our supplier and commodities through a tight procedure</p>
+            </div>
+            <div class="relative min-h-[30rem] w-full grow">
+            <div class="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
+                <div class="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
+                    <img class="h-[min(152px,40cqw)] object-cover" src="../assets/img/background.jpg" alt="">
+                    <img class="h-[min(152px,40cqw)] object-cover" src="../assets/img/background.jpg" alt="">
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    <div class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <p class="text-3xl text-center mt-2 font-semibold text-gray-900">SPONSORED BY</p>
+            <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/plus/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/plus/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/plus/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="https://tailwindui.com/plus/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48">
+            <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="https://tailwindui.com/plus/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" width="158" height="48">
+            </div>
+        </div>
+        </div>
+
+    <div class="relative isolate overflow-hidden bg-green-900 py-16 sm:py-24 lg:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+            <div class="max-w-xl lg:max-w-lg">
+                <h2 class="text-4xl font-semibold tracking-tight text-white">Subscribe to our newsletter</h2>
+                <p class="mt-4 text-lg text-gray-300">Feel free to get more info and guide from us</p>
+                <div class="mt-6 flex max-w-md gap-x-4">
+                <label for="email-address" class="sr-only">Email address</label>
+                <input id="email-address" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-green-500 sm:text-sm/6" placeholder="Enter your email">
+                <button type="submit" class="flex-none rounded-md bg-green-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-green-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500">Subscribe</button>
+                </div>
+            </div>
+            <dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
+                <div class="flex flex-col items-start">
+                <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+                    <i class="fas fa-map text-white"></i>
+                </div>
+                <dt class="mt-4 text-base font-semibold text-white">ADDRESS</dt>
+                    <dd class="mt-2 text-base/7 text-white">Fakultas Teknik Sistem Informasi</dd>
+                    <dd class="mt-2 text-base/7 text-white">Universitas Malikussaleh</dd>
+                    <dd class="mt-2 text-base/7 text-white">Kampus Bukit Indah</dd>
+                    <dd class="mt-2 text-base/7 text-white">Jl. Batam Kampus Unimal Bukit Indah, Muara Batu, Aceh Utara, Indonesia</dd>
+                </div>
+                <div class="flex flex-col items-start">
+                <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+                    <i class="fas fa-users text-white"></i>
+                </div>
+                <dt class="mt-4 text-base font-semibold text-white">OUR SOCIAL MEDIA</dt>
+                <dd class="mt-2 text-base/7 text-white"><a href="https://github.com/hazhyni" target="_blank"><i class="fab fa-github"></i> Github </a></dd>
+                <dd class="mt-2 text-base/7 text-white"><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube </a></dd>
+                <dd class="mt-2 text-base/7 text-white"><a href="https://linkedin.com/in/hazhiyah" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn </a> </dd>
+                <dd class="mt-2 text-base/7 text-white"><a href="mailto:hazhiyahy@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Gmail</a></dd>
+
+
+                </div>
+            </dl>
+            </div>
+            <p class="text-1xl font-italic tracking-tight text-white"><i class="fas fa-copyright"></i> Copyright Afish Universitas Malikussaleh - 2021</i></p>
+            
+        </div>
+    </div>
+</body>
+
+</html>
