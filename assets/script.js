@@ -1,12 +1,3 @@
-document.getElementById("shopButton").addEventListener("click", () => {
-  const tiles = document.querySelectorAll("#imageTiles .fade-in");
-  tiles.forEach((tile, index) => {
-    setTimeout(() => {
-      tile.classList.remove("fade-in");
-      tile.style.opacity = "1";
-    }, index * 200);
-  });
-});
 document.addEventListener("DOMContentLoaded", () => {
   const navbarToggle = document.getElementById("navbar-toggle");
   const navbarMenu = document.getElementById("navbar-menu");
