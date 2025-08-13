@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Masuk • AFISH</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      :root {
+        --brand: #28a745;
+        --ink: #212529;
+        --muted: #6c757d;
+        --card-radius: 1rem;
+      }
+      body {
+        min-height: 100vh;
+        background: linear-gradient(
+          135deg,
+          #d4ed91 0%,
+          #a2d85e 40%,
+          #28a745 100%
+        );
+        color: var(--ink);
+      }
+      header.page-header {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(6px);
+        padding: 1rem 1.5rem;
+        border-radius: 0.8rem;
+        display: inline-block;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+      .brand {
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        color: var(--brand);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      }
+      .login-card {
+        border: 0;
+        border-radius: var(--card-radius);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+      }
+      .login-illustration {
+        background: linear-gradient(
+          135deg,
+          rgba(40, 167, 69, 0.08),
+          rgba(40, 167, 69, 0.02)
+        );
+      }
+      .login-illustration img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+      .form-control {
+        height: 48px;
+        border-radius: 0.6rem;
+      }
+      .btn-brand {
+        background: var(--brand);
+        border-color: var(--brand);
+        color: #fff;
+        border-radius: 0.6rem;
+        font-weight: 700;
+      }
+      .btn-google {
+        background: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 0.6rem;
+        font-weight: 700;
+      }
+      .btn-google img {
+        width: 20px;
+        height: 20px;
+        margin-right: 0.5rem;
+      }
+      .divider {
+        position: relative;
+        text-align: center;
+        color: var(--muted);
+      }
+      .divider:before,
+      .divider:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 35%;
+        height: 1px;
+        background: #e9ecef;
+      }
+      .divider:before {
+        left: 0;
+      }
+      .divider:after {
+        right: 0;
+      }
+      @media (max-width: 991.98px) {
+        .login-illustration {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container py-5 text-center">
+      <header class="page-header mb-5">
+        <h1 class="h4 brand mb-1">AFISH</h1>
+        <p class="text-muted mb-0">Masuk untuk melanjutkan</p>
+      </header>
+
+      <section class="row justify-content-center">
+        <div class="col-lg-10 col-xl-9">
+          <div class="card login-card">
+            <div class="row no-gutters">
+              <div
+                class="col-md-6 login-illustration d-flex align-items-center p-4"
+              >
+                <img
+                  src="/public/img/login-back.png"
+                  alt="Ilustrasi Agribisnis"
+                />
+              </div>
+
+              <div class="col-md-6 bg-white p-4 p-md-5">
+                <h2 class="h5 text-center mb-3">Masuk</h2>
+                <button
+                  type="button"
+                  class="btn btn-google btn-block mb-3"
+                  id="btn-google"
+                >
+                  <img
+                    src="https://img.icons8.com/color/48/000000/google-logo.png"
+                    alt="Google"
+                  />
+                  Lanjutkan dengan Google
+                </button>
+
+                <p class="divider my-3">atau</p>
+
+                <form id="login-form" novalidate>
+                  <div class="form-group">
+                    <label for="identifier">Email atau Nomor HP</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="identifier"
+                      name="identifier"
+                      placeholder="nama@contoh.com atau 08xxxxxxxxxx"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Harap isi email atau nomor HP.
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-2">
+                    <label for="password">Kata Sandi</label>
+                    <div class="input-group">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        name="password"
+                        placeholder="••••••••"
+                        minlength="6"
+                        required
+                      />
+                      <div class="input-group-append">
+                        <button
+                          class="btn btn-outline-secondary"
+                          type="button"
+                          id="togglePassword"
+                        >
+                          <i class="far fa-eye"></i>
+                        </button>
+                      </div>
+                      <div class="invalid-feedback">Minimal 6 karakter.</div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <div class="custom-control custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="remember"
+                      />
+                      <label class="custom-control-label" for="remember"
+                        >Ingat saya</label
+                      >
+                    </div>
+                    <a href="#" class="small">Lupa kata sandi?</a>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="btn btn-brand btn-block"
+                    id="btn-login"
+                  >
+                    Masuk
+                  </button>
+                </form>
+
+                <p class="text-center mt-3 mb-0">
+                  Belum punya akun AFISH?
+                  <a href="./register.html" class="font-weight-bold">Daftar</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("togglePassword")
+        .addEventListener("click", function () {
+          var input = document.getElementById("password");
+          var icon = this.querySelector("i");
+          if (input.type === "password") {
+            input.type = "text";
+            icon.classList.replace("fa-eye", "fa-eye-slash");
+          } else {
+            input.type = "password";
+            icon.classList.replace("fa-eye-slash", "fa-eye");
+          }
+        });
+    </script>
+  </body>
+</html>

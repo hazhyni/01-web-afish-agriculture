@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>AFISH • Beranda</title>
+
+    <!-- Data eksternal -->
+    <script src="./content/data.js" defer></script>
+
+    <!-- Bootstrap 4.6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome-free-5.15.4-web/css/all.min.css"
+    />
+
+    <!-- Styles utama -->
+    <style>
+      :root {
+        /* Warna dasar */
+        --green: #198754;
+        --green-ink: #146c43;
+        --surface: #ffffff;
+        --surface-2: #f8faf9;
+        --text: #1f2937;
+        --muted: #6c757d;
+        --line: rgba(0, 0, 0, 0.08);
+
+        /* Radius & shadow */
+        --radius: 16px;
+        --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.06);
+        --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
+
+        /* Glass */
+        --glass-bg: rgba(255, 255, 255, 0.9);
+        --glass-border: 1px solid rgba(230, 239, 235, 0.9);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --surface: #0b1110;
+          --surface-2: #0f1716;
+          --text: #e5e7eb;
+          --muted: #9aa4ad;
+          --line: rgba(255, 255, 255, 0.08);
+          --glass-bg: rgba(17, 24, 39, 0.55);
+          --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+      }
+
+      html,
+      body {
+        background: var(--surface-2);
+        color: var(--text);
+      }
+
+      /* === Layout sections === */
+      .section {
+        padding: 2.5rem 0;
+      }
+      .section-alt {
+        padding: 2.5rem 0;
+        background: var(--surface-2);
+      }
+      .section-title {
+        margin-bottom: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+      }
+      .section-sub {
+        color: var(--muted);
+        margin-bottom: 1.25rem;
+      }
+
+      /* === Navbar === */
+      .navbar {
+        box-shadow: var(--shadow-sm);
+      }
+      .navbar-glass {
+        position: sticky;
+        top: 0;
+        z-index: 1030;
+        background: rgba(25, 135, 84, 0.95);
+        backdrop-filter: saturate(180%) blur(8px);
+        -webkit-backdrop-filter: saturate(180%) blur(8px);
+      }
+      .navbar .nav-link {
+        color: #e8fff2 !important;
+        opacity: 0.95;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+      .navbar .nav-link:hover {
+        opacity: 1;
+        transform: translateY(-1px);
+      }
+      .navbar .nav-link .badge-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #ffd166;
+        display: inline-block;
+        margin-left: 6px;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35);
+      }
+      .brand-mark {
+        display: flex;
+        align-items: center;
+      }
+      .brand-logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+      }
+      .brand-title {
+        font-weight: 800;
+        letter-spacing: 0.3px;
+        margin-left: 0.6rem;
+        color: #fff;
+      }
+      .btn-cta {
+        background: #fff;
+        color: var(--green);
+        border: 0;
+        border-radius: 999px;
+        padding: 0.45rem 0.95rem;
+        font-weight: 700;
+        box-shadow: var(--shadow-sm);
+      }
+      .btn-cta:hover {
+        background: #f3f7f5;
+        color: #145c38;
+      }
+      .nav-divider {
+        width: 1px;
+        height: 28px;
+        background: rgba(255, 255, 255, 0.25);
+        margin: 0 0.75rem;
+        display: none;
+      }
+      @media (min-width: 992px) {
+        .nav-divider {
+          display: block;
+        }
+      }
+
+      /* === Hero / Carousel === */
+      .carousel-hero {
+        position: relative;
+      }
+      .carousel-hero .carousel-item img {
+        max-height: 540px;
+        object-fit: cover;
+        border-radius: 0 0 var(--radius) var(--radius);
+        box-shadow: var(--shadow);
+      }
+      .carousel-hero .overlay {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.1) 0%,
+          rgba(0, 0, 0, 0.28) 65%,
+          rgba(0, 0, 0, 0.38) 100%
+        );
+        border-radius: 0 0 var(--radius) var(--radius);
+      }
+      .carousel-hero .control-btn {
+        width: 46px;
+        height: 46px;
+        display: grid;
+        place-items: center;
+        background: #ffffff;
+        border-radius: 999px;
+        box-shadow: var(--shadow);
+      }
+      .carousel-hero .carousel-control-prev,
+      .carousel-hero .carousel-control-next {
+        width: auto;
+        opacity: 1;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .carousel-hero .carousel-control-prev:hover .control-btn,
+      .carousel-hero .carousel-control-next:hover .control-btn {
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-1px);
+      }
+      .carousel-hero .carousel-indicators {
+        bottom: 10px;
+      }
+      .carousel-hero .carousel-indicators li {
+        width: 18px;
+        height: 6px;
+        border-radius: 999px;
+        margin: 0 4px;
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      }
+      .carousel-hero .carousel-indicators .active {
+        background: #fff;
+      }
+      @media (max-width: 576px) {
+        .carousel-hero .carousel-item img {
+          max-height: 420px;
+        }
+      }
+
+      /* === Search === */
+      .search-section {
+        padding: 2rem 0 1rem;
+      }
+      .search-wrapper {
+        display: flex;
+        background: var(--surface);
+        border-radius: 50px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        transition: box-shadow 0.2s ease;
+      }
+      .search-wrapper:focus-within {
+        box-shadow: var(--shadow-lg);
+      }
+      .search-wrapper input {
+        flex: 1;
+        border: none;
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+        outline: none;
+        background: transparent;
+        color: inherit;
+      }
+      .search-wrapper button {
+        background: var(--surface);
+        color: var(--green);
+        border: none;
+        padding: 0 1.25rem;
+        font-weight: 700;
+        border-left: 1px solid #edf2ef;
+        transition: background 0.2s ease;
+      }
+      .search-wrapper button:hover {
+        background: #f1f8f4;
+      }
+
+      /* === Quick menu === */
+      .quick-menu { padding: 1rem 0 2.25rem; }
+      .quick-grid [class^="col-"] { display: flex; }
+
+      /* Kartu yang klikable penuh + ripple + ring */
+      .q-card { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .55rem; width: 100%; padding: 1.1rem .85rem; border-radius: 20px; text-align: center; background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(248,250,249,.92)); border: 1px solid rgba(20,108,67,.10); box-shadow: var(--shadow-sm); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; text-decoration: none; color: inherit; overflow: hidden; }
+      .q-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: rgba(20,108,67,.2); }
+      .q-card:active { transform: translateY(-1px); }
+
+      /* Decorative ring */
+      .q-card::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; background: radial-gradient(120px 120px at 25% 25%, rgba(25,135,84,.12), transparent 40%), radial-gradient(140px 140px at 75% 20%, rgba(25,135,84,.10), transparent 45%); opacity: .7; pointer-events: none; }
+
+      /* Icon bubble */
+      .q-icon-wrap { position: relative; width: 88px; height: 88px; border-radius: 999px; display: grid; place-items: center; background: radial-gradient(120px 120px at 30% 30%, rgba(25,135,84,.16), rgba(25,135,84,.03)); box-shadow: inset 0 0 0 1px rgba(20,108,67,.06), var(--shadow-sm); }
+      .q-icon { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; display: block; box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+
+      .q-title { font-weight: 800; letter-spacing: .2px; }
+      .q-sub { font-size: .8rem; color: var(--muted); }
+
+      /* Ripple effect */
+      .q-card .ripple { position: absolute; transform: translate(-50%, -50%); border-radius: 50%; width: 0; height: 0; background: currentColor; opacity: .12; pointer-events: none; }
+
+      @media (prefers-color-scheme: dark) {
+        .q-card { background: linear-gradient(180deg, rgba(17,24,39,.65), rgba(17,24,39,.50)); border-color: rgba(255,255,255,.06); }
+        .q-card::before { background: radial-gradient(120px 120px at 25% 25%, rgba(25,135,84,.28), transparent 40%), radial-gradient(140px 140px at 75% 20%, rgba(25,135,84,.20), transparent 45%); }
+        .q-icon-wrap { background: radial-gradient(120px 120px at 30% 30%, rgba(25,135,84,.28), rgba(25,135,84,.06)); box-shadow: inset 0 0 0 1px rgba(255,255,255,.06), var(--shadow-sm); }
+      }
+      /* === Sponsor === */
+      .sponsor-card {
+        background: var(--surface);
+        border-radius: var(--radius);
+        padding: 1rem;
+        box-shadow: var(--shadow-sm);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        height: 100%;
+      }
+      .sponsor-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow);
+      }
+      .sponsor-card img {
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        background: #fff;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .sponsor-name {
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+
+      /* === Produk card === */
+      .p-card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 16px;
+        overflow: hidden;
+        background: var(--glass-bg);
+        border: var(--glass-border);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+        height: 100%;
+      }
+      .p-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+      }
+      .p-media {
+        position: relative;
+        padding-top: 75%;
+        background: var(--surface-2);
+        overflow: hidden;
+      }
+      .p-media img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.25s;
+      }
+      .p-card:hover .p-media img {
+        transform: scale(1.03);
+      }
+      .p-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 3;
+        padding: 0.28rem 0.6rem;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        background: #ffffffd9;
+        border: 1px solid #e6f3ea;
+      }
+      .badge-cat-success {
+        background: #e8f5ee;
+        color: #157347;
+        border-color: #cbe9d8;
+      }
+      .badge-cat-info {
+        background: #e6f6fe;
+        color: #055160;
+        border-color: #cdefff;
+      }
+      .p-status {
+        position: absolute;
+        top: 44px;
+        left: 10px;
+        z-index: 3;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+        border-radius: 6px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid #eef2ef;
+      }
+      .p-status-producer {
+        background: #d1fae5;
+        color: #065f46;
+        border-color: #a7f3d0;
+      }
+      .p-status-seller {
+        background: #fef3c7;
+        color: #92400e;
+        border-color: #fde68a;
+      }
+      .p-discount {
+        position: absolute;
+        top: 10px;
+        right: 56px;
+        z-index: 3;
+        background: #e53935;
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 800;
+        padding: 0.25rem 0.55rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      .p-wishlist {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 3;
+        background: rgba(255, 255, 255, 0.92);
+        border: none;
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: background 0.18s ease, transform 0.18s ease;
+      }
+      .p-wishlist:hover {
+        background: #ffe5e7;
+        transform: translateY(-1px);
+      }
+      .p-wishlist i {
+        color: #e11d48;
+      }
+      .p-wishlist.active i {
+        color: #e53935;
+      }
+      .p-body {
+        padding: 0.85rem 0.9rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+      }
+      .p-title {
+        font-weight: 800;
+        font-size: 1rem;
+        margin: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .p-price-wrap {
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+      }
+      .p-price {
+        font-weight: 900;
+        color: var(--green-ink);
+      }
+      .p-old-price {
+        font-size: 0.85rem;
+        color: #9ca3af;
+        text-decoration: line-through;
+      }
+      .p-meta {
+        font-size: 0.85rem;
+        color: var(--muted);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+      .p-meta i {
+        margin-right: 0.35rem;
+        opacity: 0.8;
+      }
+      .p-actions {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.35rem;
+      }
+      .p-actions .btn {
+        border-radius: 999px;
+        font-weight: 700;
+      }
+
+      /* === Footer === */
+      .footer-main {
+        background: linear-gradient(135deg, #fefce8 0%, #e8f5ee 100%);
+        position: relative;
+        overflow: hidden;
+        color: #1f2937;
+      }
+      .footer-main::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        left: -60px;
+        width: 320px;
+        height: 320px;
+        background: radial-gradient(
+          circle at center,
+          rgba(186, 230, 202, 0.25) 0%,
+          transparent 70%
+        );
+        z-index: 0;
+      }
+      .footer-main::after {
+        content: "";
+        position: absolute;
+        bottom: -60px;
+        right: -60px;
+        width: 320px;
+        height: 320px;
+        background: radial-gradient(
+          circle at center,
+          rgba(254, 240, 138, 0.25) 0%,
+          transparent 70%
+        );
+        z-index: 0;
+      }
+      .footer-main .container {
+        position: relative;
+        z-index: 1;
+      }
+      .footer-social a {
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        background-color: rgba(255, 255, 255, 0.6);
+      }
+      .footer-social a:hover {
+        background-color: var(--green);
+        color: #fff !important;
+      }
+      .copyright {
+        border-top: 1px solid var(--line);
+      }
+
+      /* Util */
+      .rounded-16 {
+        border-radius: var(--radius);
+      }
+      .card-hover {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: var(--shadow-sm);
+        border: 0;
+      }
+      .card-hover:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-glass navbar-expand-lg navbar-dark bg-success">
+      <div class="container">
+        <a class="navbar-brand brand-mark" href="./index.html">
+          <span
+            class="brand-logo d-inline-flex align-items-center justify-content-center bg-green"
+          >
+            <img
+              src="./public/img/logo.png"
+              alt="AFISH"
+              width="40"
+              height="40"
+            />
+          </span>
+          <span class="brand-title">AFISH</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto align-items-lg-center">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="./keranjang.html"
+                title="Keranjang"
+                aria-label="Buka keranjang"
+              >
+                <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <a
+                class="nav-link"
+                href="#"
+                title="Notifikasi"
+                aria-label="Notifikasi"
+              >
+                <i class="fas fa-bell" aria-hidden="true"></i
+                ><span class="badge-dot"></span>
+              </a>
+              <span class="nav-divider"></span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./auth/login.html">Log in</a>
+            </li>
+            <li class="nav-item ml-lg-2">
+              <a class="btn btn-cta" href="./auth/register.html">Daftar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO / CAROUSEL -->
+    <div
+      id="carouselHero"
+      class="carousel slide carousel-hero"
+      data-ride="carousel"
+      data-interval="5000"
+      data-pause="hover"
+      aria-label="Promo AFISH"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselHero"
+          data-slide-to="0"
+          class="active"
+          aria-label="Slide 1"
+        ></li>
+        <li
+          data-target="#carouselHero"
+          data-slide-to="1"
+          aria-label="Slide 2"
+        ></li>
+        <li
+          data-target="#carouselHero"
+          data-slide-to="2"
+          aria-label="Slide 3"
+        ></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="./public/img/slides/slide1.png"
+            class="d-block w-100"
+            alt="Ekosistem Agro-Maritim AFISH"
+            loading="eager"
+          />
+          <span class="overlay" aria-hidden="true"></span>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./public/img/slides/slide2.png"
+            class="d-block w-100"
+            alt="Rantai pasok efisien"
+            loading="lazy"
+          />
+          <span class="overlay" aria-hidden="true"></span>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./public/img/slides/slide3.png"
+            class="d-block w-100"
+            alt="Produk pilihan AFISH"
+            loading="lazy"
+          />
+          <span class="overlay" aria-hidden="true"></span>
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselHero"
+        role="button"
+        data-slide="prev"
+        aria-label="Sebelumnya"
+      >
+        <span class="control-btn"
+          ><span class="carousel-control-prev-icon" aria-hidden="true"></span
+        ></span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselHero"
+        role="button"
+        data-slide="next"
+        aria-label="Berikutnya"
+      >
+        <span class="control-btn"
+          ><span class="carousel-control-next-icon" aria-hidden="true"></span
+        ></span>
+      </a>
+    </div>
+
+    <!-- PENCARIAN -->
+    <section class="container search-section">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+          <form
+            class="search-wrapper"
+            onsubmit="return false"
+            role="search"
+            aria-label="Cari produk atau kategori"
+          >
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Cari Produk, Kategori..."
+              aria-label="Ketik kata kunci"
+            />
+            <button id="btnCari" type="button">Cari</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK MENU -->
+    <section class="container quick-menu">
+      <div class="row quick-grid text-center">
+        <div class="col-6 col-md-3 mb-3">
+          <a href="#" class="q-card" data-action="pengiriman" aria-label="Pengiriman">
+            <span class="q-icon-wrap"><img class="q-icon" src="./public/img/menu/pengiriman.jpeg" alt="Ikon Pengiriman" loading="lazy" /></span>
+            <span class="q-title">Pengiriman</span>
+            <span class="q-sub">Lacak & tarif</span>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <a href="#" class="q-card" data-action="topup" aria-label="Top Up">
+            <span class="q-icon-wrap"><img class="q-icon" src="./public/img/menu/topup.jpeg" alt="Ikon Top Up" loading="lazy" /></span>
+            <span class="q-title">Top Up</span>
+            <span class="q-sub">Saldo dompet</span>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <a href="#" class="q-card" data-action="nearest" aria-label="Supplier Terdekat">
+            <span class="q-icon-wrap"><img class="q-icon" src="./public/img/menu/nearest.jpeg" alt="Ikon Supplier Terdekat" loading="lazy" /></span>
+            <span class="q-title">Supplier Terdekat</span>
+            <span class="q-sub">Di sekitar kamu</span>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <a href="#" class="q-card" data-action="training" aria-label="Training">
+            <span class="q-icon-wrap"><img class="q-icon" src="./public/img//menu/traning.jpeg" alt="Ikon Training" loading="lazy" /></span>
+            <span class="q-title">Training</span>
+            <span class="q-sub">Kelas & sertifikat</span>
+          </a>
+        </div>
+      </div>
+    <!-- SPONSOR -->
+    <section class="container sponsor-section">
+      <h3 class="section-title text-center mb-4">Sponsors</h3>
+      <div class="row text-center">
+        <div class="col-6 col-md-3 mb-3 d-flex">
+          <div class="sponsor-card w-100">
+            <img
+              src="./assets/img/LOGO PELINDO I.png"
+              alt="Pelindo"
+              loading="lazy"
+            />
+            <div class="sponsor-name">Pelindo</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3 d-flex">
+          <div class="sponsor-card w-100">
+            <img
+              src="./assets/img/LOGO PELINDO I.png"
+              alt="Angkasa Pura"
+              loading="lazy"
+            />
+            <div class="sponsor-name">Angkasa Pura</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3 d-flex">
+          <div class="sponsor-card w-100">
+            <img
+              src="./assets/img/LOGO PELINDO I.png"
+              alt="Pelni"
+              loading="lazy"
+            />
+            <div class="sponsor-name">Pelni</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3 d-flex">
+          <div class="sponsor-card w-100">
+            <img
+              src="./assets/img/LOGO PELINDO I.png"
+              alt="KAI Indonesia"
+              loading="lazy"
+            />
+            <div class="sponsor-name">KAI Indonesia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KATEGORI -->
+    <section class="container">
+      <h3 class="section-title">Kategori Produk</h3>
+      <div id="kategori-container" class="row"></div>
+    </section>
+
+    <!-- PRODUK TERLARIS -->
+    <section class="container">
+      <h3 class="section-title">Produk Terlaris</h3>
+      <div id="produk-terlaris" class="row"></div>
+    </section>
+
+    <!-- SEMUA PRODUK -->
+    <section class="container">
+      <h3 class="section-title">Semua Produk</h3>
+      <div id="produk-grid" class="row"></div>
+      <div class="text-center">
+        <a href="./auth/login.html"
+          ><button type="button" class="btn btn-success mt-3">
+            Lihat Lainnya
+          </button></a
+        >
+      </div>
+    </section>
+
+    <!-- PREVIEW (opsional) -->
+    <section class="container section">
+      <h3 class="section-title">Top Products</h3>
+      <div class="row" id="preview-grid"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-main text-dark pt-5 pb-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <h5 class="mb-3 font-weight-bold">Alamat</h5>
+            <p class="mb-1" id="footer-nama"></p>
+            <p class="mb-1" id="footer-alamat"></p>
+            <p class="mb-0" id="footer-fakultas"></p>
+          </div>
+          <div class="col-md-6 mb-4">
+            <h5 class="mb-3 font-weight-bold">Kontak</h5>
+            <ul class="list-unstyled">
+              <li>Email: <a href="#" id="footer-email"></a></li>
+              <li>Telepon: <span id="footer-telp">—</span></li>
+            </ul>
+            <div class="footer-social mt-3">
+              <a
+                href="#"
+                target="_blank"
+                class="btn btn-outline-success btn-sm mr-2"
+                id="footer-fb"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                target="_blank"
+                class="btn btn-outline-success btn-sm mr-2"
+                id="footer-ig"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="#"
+                target="_blank"
+                class="btn btn-outline-success btn-sm mr-2"
+                id="footer-wa"
+                aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="text-center small text-muted">
+          &copy; <span id="footer-year"></span> AFISH. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS: jQuery + Bootstrap Bundle -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./assets/fontawesome-free-5.15.4-web/js/all.min.js"
+      defer
+    ></script>
+
+    <script>
+      /* === Footer dinamis (fallback kalau data.js belum ada) === */
+      const dataFooter = window.kampus || {
+        name: "Universitas Malikussaleh",
+        alamat: "Jl. Batam, Bukit Indah, Lhokseumawe, Aceh Utara, Indonesia",
+        fakultas: "Fakultas Teknik",
+        email: "info@unimal.ac.id",
+        telp: "+62 123 4567",
+        sosmed: {
+          fb: "https://facebook.com/",
+          ig: "https://instagram.com/",
+          wa: "https://wa.me/628123456789",
+        },
+      };
+
+      document.getElementById("footer-nama").textContent =
+        dataFooter.name || dataFooter.nama || "—";
+      document.getElementById("footer-alamat").textContent =
+        dataFooter.alamat || "—";
+      document.getElementById("footer-fakultas").textContent =
+        dataFooter.fakultas || "—";
+      const emailEl = document.getElementById("footer-email");
+      emailEl.textContent = dataFooter.email || "—";
+      emailEl.href = dataFooter.email ? `mailto:${dataFooter.email}` : "#";
+      document.getElementById("footer-telp").textContent =
+        dataFooter.telp || "—";
+      if (dataFooter.sosmed) {
+        document.getElementById("footer-fb").href = dataFooter.sosmed.fb || "#";
+        document.getElementById("footer-ig").href = dataFooter.sosmed.ig || "#";
+        document.getElementById("footer-wa").href = dataFooter.sosmed.wa || "#";
+      }
+      document.getElementById("footer-year").textContent =
+        new Date().getFullYear();
+
+      /* === Render kategori dari content/data.js jika tersedia === */
+      (function renderKategori() {
+        const wrap = document.getElementById("kategori-container");
+        const sumber = window.kategori || window.categories || [];
+        if (!wrap) return;
+        if (!Array.isArray(sumber) || sumber.length === 0) {
+          wrap.innerHTML =
+            '<div class="col-12 text-muted">Data kategori belum tersedia.</div>';
+          return;
+        }
+        wrap.innerHTML = sumber
+          .map(
+            (k) => `
+          <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex">
+            <a href="${
+              k.link || "#"
+            }" class="card card-hover w-100 text-reset text-decoration-none">
+              <div class="p-3 d-flex align-items-center">
+                <img src="${
+                  k.icon || "./assets/img/icon-placeholder.svg"
+                }" alt="${
+              k.nama || k.name
+            }" width="44" height="44" class="mr-3 rounded-16" loading="lazy"/>
+                <div>
+                  <div class="font-weight-bold">${k.nama || k.name}</div>
+                  <div class="small text-muted">${
+                    k.count ? k.count + " produk" : ""
+                  }</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        `
+          )
+          .join("");
+      })();
+
+      /* === Preview produk dummy (tetap ada untuk demo UI) === */
+      const items = [
+        {
+          nama: "Beras Premium 5kg",
+          img: "https://picsum.photos/seed/beras/600/400",
+          kategori: "Pertanian",
+          status: "produsen",
+          harga: 60000,
+          hargaCoret: 75000,
+          lokasi: "Lhokseumawe",
+          berat: "5 kg",
+          diskon: "-20%",
+        },
+        {
+          nama: "Ikan Tuna Segar",
+          img: "https://picsum.photos/seed/tuna/600/400",
+          kategori: "Perikanan",
+          status: "penjual",
+          harga: 120000,
+          hargaCoret: null,
+          lokasi: "Banda Aceh",
+          berat: "2 kg",
+          diskon: null,
+        },
+        {
+          nama: "Cabai Merah 1kg",
+          img: "https://picsum.photos/seed/cabai/600/400",
+          kategori: "Sayuran",
+          status: "penjual",
+          harga: 38000,
+          hargaCoret: 45000,
+          lokasi: "Medan",
+          berat: "1 kg",
+          diskon: "-15%",
+        },
+      ];
+      const badgeMap = {
+        Pertanian: "badge-cat-success",
+        Perikanan: "badge-cat-info",
+        Sayuran: "badge-cat-success",
+        Peternakan: "badge-cat-info",
+        Perkebunan: "badge-cat-success",
+      };
+      const rupiah = (n) =>
+        new Intl.NumberFormat("id-ID", {
+          style: "currency",
+          currency: "IDR",
+          maximumFractionDigits: 0,
+        }).format(n);
+      const grid = document.getElementById("preview-grid");
+      grid.innerHTML = items
+        .map((p) => {
+          const badge = badgeMap[p.kategori] || "badge-cat-success";
+          const statusCls =
+            p.status === "produsen" ? "p-status-producer" : "p-status-seller";
+          return `
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex">
+            <div class="p-card w-100">
+              <div class="p-media">
+                <img src="${p.img}" alt="${p.nama}" loading="lazy" />
+                <span class="p-badge ${badge}">${p.kategori}</span>
+                <span class="p-status ${statusCls}">${
+            p.status === "produsen" ? "Produsen" : "Penjual"
+          }</span>
+                ${p.diskon ? `<span class="p-discount">${p.diskon}</span>` : ""}
+                <button class="p-wishlist" title="Tambah ke Wishlist"><i class="far fa-heart" aria-hidden="true"></i><span class="sr-only">Tambah ke Wishlist</span></button>
+              </div>
+              <div class="p-body">
+                <h5 class="p-title">${p.nama}</h5>
+                <div class="p-price-wrap"><span class="p-price">${rupiah(
+                  p.harga
+                )}</span>${
+            p.hargaCoret
+              ? `<span class="p-old-price">${rupiah(p.hargaCoret)}</span>`
+              : ""
+          }</div>
+                <div class="p-meta"><span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> ${
+                  p.lokasi
+                }</span><span><i class="fas fa-weight-hanging" aria-hidden="true"></i> ${
+            p.berat
+          }</span></div>
+                <div class="p-actions">
+                  <button class="btn btn-success btn-sm" aria-label="Tambah ke keranjang"><i class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+                  <a href="#" class="btn btn-outline-secondary btn-sm">Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+          </div>`;
+        })
+        .join("");
+
+      // Toggle wishlist icon
+      document.addEventListener("click", (e) => {
+        const w = e.target.closest(".p-wishlist");
+        if (!w) return;
+        w.classList.toggle("active");
+        const i = w.querySelector("i");
+        i.classList.toggle("far", !w.classList.contains("active"));
+        i.classList.toggle("fas", w.classList.contains("active"));
+      });
+
+      // Pencarian (demo): scroll ke kategori
+      document.getElementById("btnCari").addEventListener("click", () => {
+        document
+          .getElementById("kategori-container")
+          .scrollIntoView({ behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>

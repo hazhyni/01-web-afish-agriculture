@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrasi Akun • AFISH</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --green: #22c55e; /* emerald-500 */
+        --green-600: #16a34a;
+        --blue: #3b82f6; /* blue-500 */
+        --ink: #0f172a; /* slate-900 */
+        --muted: #64748b; /* slate-500 */
+        --surface: #ffffff;
+        --ring: 0 0 0 4px rgba(59, 130, 246, 0.2);
+        --radius: 16px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial,
+          sans-serif;
+        color: var(--ink);
+        background: radial-gradient(
+            1200px 600px at -10% -10%,
+            rgba(34, 197, 94, 0.18),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 600px at 110% 0%,
+            rgba(59, 130, 246, 0.18),
+            transparent 60%
+          ),
+          linear-gradient(135deg, #e6f7ec 0%, #e8f2ff 100%);
+        display: grid;
+        place-items: center;
+        padding: 2rem 1rem;
+      }
+      .shell {
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        margin-bottom: 1.25rem;
+        user-select: none;
+      }
+      .brand__logo {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        overflow: hidden;
+        background: linear-gradient(135deg, var(--green), var(--blue));
+        box-shadow: 0 6px 18px rgba(34, 197, 94, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .brand__logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+      }
+      .brand__name {
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        color: var(--green-600);
+      }
+
+      .card {
+        display: grid;
+        grid-template-columns: 1.05fr 1fr;
+        gap: 0;
+        align-items: stretch;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        border-radius: var(--radius);
+        box-shadow: 0 20px 60px rgba(2, 6, 23, 0.12),
+          0 6px 20px rgba(2, 6, 23, 0.06);
+        overflow: hidden;
+      }
+      @media (max-width: 900px) {
+        .card {
+          grid-template-columns: 1fr;
+        }
+        .side {
+          display: none;
+        }
+      }
+
+      .side {
+        background: linear-gradient(
+          135deg,
+          rgba(34, 197, 94, 0.08),
+          rgba(59, 130, 246, 0.08)
+        );
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .side img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 10px 28px rgba(2, 6, 23, 0.12);
+      }
+
+      .form {
+        background: var(--surface);
+        padding: 2rem 2rem 1.5rem 2rem;
+      }
+      .form h2 {
+        margin: 0 0 0.25rem;
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+      .form p.helper {
+        margin: 0.2rem 0 1.2rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .grid-1 {
+        grid-template-columns: 1fr;
+      }
+      @media (max-width: 600px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+      label {
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+      .control {
+        position: relative;
+      }
+      .control input,
+      .control select {
+        width: 100%;
+        height: 48px;
+        padding: 0.75rem 2.6rem 0.75rem 0.9rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        font-size: 1rem;
+        background: #fff;
+        transition: box-shadow 0.15s ease, border-color 0.15s ease,
+          transform 0.02s ease;
+      }
+      .control input:focus,
+      .control select:focus {
+        outline: none;
+        border-color: var(--blue);
+        box-shadow: var(--ring);
+      }
+      .icon {
+        position: absolute;
+        right: 0.65rem;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.6;
+        pointer-events: none;
+      }
+
+      .password-toggle {
+        position: absolute;
+        right: 0.4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        padding: 0.4rem;
+      }
+
+      .strength {
+        height: 8px;
+        border-radius: 999px;
+        background: #e2e8f0;
+        overflow: hidden;
+      }
+      .strength > span {
+        display: block;
+        height: 100%;
+        width: 0;
+        background: linear-gradient(90deg, #ef4444, #f59e0b, #22c55e);
+        transition: width 0.3s ease;
+      }
+      .hint {
+        font-size: 0.875rem;
+        color: var(--muted);
+        margin-top: 0.35rem;
+      }
+
+      .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        margin-top: 0.8rem;
+      }
+      .btn {
+        height: 48px;
+        border: 0;
+        border-radius: 12px;
+        font-weight: 800;
+        font-size: 1rem;
+        cursor: pointer;
+        background: linear-gradient(90deg, var(--green) 10%, var(--blue) 100%);
+        color: #fff;
+        box-shadow: 0 10px 22px rgba(34, 197, 94, 0.22);
+        transition: transform 0.06s ease, filter 0.15s ease;
+      }
+      .btn:hover {
+        filter: brightness(1.02) saturate(1.02);
+      }
+      .btn:active {
+        transform: translateY(1px);
+      }
+
+      .foot {
+        text-align: center;
+        margin-top: 0.6rem;
+      }
+      .link {
+        color: var(--blue);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .link:hover {
+        text-decoration: underline;
+      }
+
+      .checkbox {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+        margin-top: 0.2rem;
+      }
+      .checkbox input {
+        margin-top: 0.2rem;
+      }
+      .error {
+        color: #dc2626;
+        font-size: 0.85rem;
+        margin-top: 0.25rem;
+        display: none;
+      }
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <div class="brand" aria-hidden="true">
+        <div class="brand__logo">
+          <img src="/public/img/img.jpeg" alt="Logo AFISH" />
+        </div>
+        <div class="brand__name">AFISH</div>
+      </div>
+
+      <section class="card" aria-label="Form Registrasi">
+        <aside class="side" aria-hidden="true">
+          <img
+            src="/public/img/register-back.png"
+            alt="Ilustrasi agribisnis: perkebunan dan panen"
+          />
+        </aside>
+
+        <section class="form">
+          <h2>Daftar Akun</h2>
+          <p class="helper">
+            Bergabung untuk mengelola rantai pasok agribisnis dengan mudah.
+          </p>
+
+          <form id="register-form" novalidate>
+            <div class="grid">
+              <div class="field">
+                <label for="fullname">Nama Lengkap</label>
+                <div class="control">
+                  <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    autocomplete="name"
+                    required
+                    placeholder="Nama sesuai KTP"
+                  />
+                  <svg
+                    class="icon"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                </div>
+                <div class="error" id="err-fullname">
+                  Nama minimal 3 karakter.
+                </div>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <div class="control">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                    placeholder="nama@contoh.com"
+                  />
+                  <svg
+                    class="icon"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M4 4h16v16H4z" opacity=".2" />
+                    <path d="M22 6l-10 7L2 6" />
+                  </svg>
+                </div>
+                <div class="error" id="err-email">
+                  Format email tidak valid.
+                </div>
+              </div>
+            </div>
+
+            <div class="grid">
+              <div class="field">
+                <label for="phone">Nomor HP</label>
+                <div class="control">
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    inputmode="numeric"
+                    placeholder="08xxxxxxxxxx"
+                  />
+                  <svg
+                    class="icon"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="5" y="2" width="14" height="20" rx="2" />
+                    <path d="M12 18h.01" />
+                  </svg>
+                </div>
+                <div class="error" id="err-phone">Nomor HP 10–15 digit.</div>
+              </div>
+              <div class="field">
+                <label for="role">Peran</label>
+                <div class="control">
+                  <select id="role" name="role" required>
+                    <option value="" disabled selected>Pilih peran</option>
+                    <option value="petani">Petani</option>
+                    <option value="pedagang">Pedagang</option>
+                    <option value="konsumen">Konsumen</option>
+                  </select>
+                  <svg
+                    class="icon"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </div>
+                <div class="error" id="err-role">Pilih salah satu peran.</div>
+              </div>
+            </div>
+
+            <div class="grid grid-1">
+              <div class="field">
+                <label for="password">Kata Sandi</label>
+                <div class="control">
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    autocomplete="new-password"
+                    required
+                    placeholder="Minimal 8 karakter"
+                  />
+                  <button
+                    class="password-toggle"
+                    type="button"
+                    aria-label="Tampilkan kata sandi"
+                    id="togglePw1"
+                  >
+                    👁️
+                  </button>
+                </div>
+                <div class="strength" aria-hidden="true">
+                  <span id="strengthBar"></span>
+                </div>
+                <div class="hint">
+                  Gunakan kombinasi huruf besar, kecil, angka, dan simbol.
+                </div>
+                <div class="error" id="err-password">
+                  Minimal 8 karakter dengan variasi karakter.
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="confirm-password">Konfirmasi Kata Sandi</label>
+                <div class="control">
+                  <input
+                    type="password"
+                    id="confirm-password"
+                    name="confirm-password"
+                    autocomplete="new-password"
+                    required
+                    placeholder="Ulangi kata sandi"
+                  />
+                  <button
+                    class="password-toggle"
+                    type="button"
+                    aria-label="Tampilkan kata sandi"
+                    id="togglePw2"
+                  >
+                    👁️
+                  </button>
+                </div>
+                <div class="error" id="err-confirm">Kata sandi tidak sama.</div>
+              </div>
+
+              <div class="checkbox">
+                <input type="checkbox" id="terms" required />
+                <label for="terms"
+                  >Saya menyetujui
+                  <a class="link" href="#">Syarat & Ketentuan</a> serta
+                  <a class="link" href="#">Kebijakan Privasi</a>.</label
+                >
+              </div>
+            </div>
+
+            <div class="actions">
+              <button type="submit" class="btn" id="btn-register">
+                Daftar
+              </button>
+              <div class="foot">
+                Sudah punya akun?
+                <a class="link" href="/auth/login.html">Masuk</a>
+              </div>
+            </div>
+          </form>
+        </section>
+      </section>
+    </div>
+
+    <script>
+      const form = document.getElementById("register-form");
+      const fullname = document.getElementById("fullname");
+      const email = document.getElementById("email");
+      const phone = document.getElementById("phone");
+      const role = document.getElementById("role");
+      const pw = document.getElementById("password");
+      const pw2 = document.getElementById("confirm-password");
+      const bar = document.getElementById("strengthBar");
+      const togglePw1 = document.getElementById("togglePw1");
+      const togglePw2 = document.getElementById("togglePw2");
+
+      function show(id) {
+        document.getElementById(id).classList.add("show");
+      }
+      function hide(id) {
+        document.getElementById(id).classList.remove("show");
+      }
+
+      function validateName() {
+        const ok = fullname.value.trim().length >= 3;
+        ok ? hide("err-fullname") : show("err-fullname");
+        return ok;
+      }
+      function validateEmail() {
+        const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+        ok ? hide("err-email") : show("err-email");
+        return ok;
+      }
+      function validatePhone() {
+        const ok = /^0\d{9,17}$/.test(phone.value.trim());
+        ok ? hide("err-phone") : show("err-phone");
+        return ok;
+      }
+      function validateRole() {
+        const ok = !!role.value;
+        ok ? hide("err-role") : show("err-role");
+        return ok;
+      }
+
+      function scorePassword(s) {
+        let score = 0;
+        if (!s) return score;
+        const letters = {
+          lower: /[a-z]/.test(s),
+          upper: /[A-Z]/.test(s),
+          num: /[0-9]/.test(s),
+          sym: /[^A-Za-z0-9]/.test(s),
+        };
+        const variety = Object.values(letters).filter(Boolean).length;
+        score += Math.min(6, Math.floor(s.length / 2));
+        score += variety * 2; // up to +8
+        return Math.min(14, score); // cap
+      }
+      function updateStrength() {
+        const score = scorePassword(pw.value);
+        const pct = Math.round((score / 14) * 100);
+        bar.style.width = pct + "%";
+      }
+      function validatePw() {
+        const s = pw.value;
+        const strong =
+          s.length >= 8 && /[A-Z]/.test(s) && /[a-z]/.test(s) && /\d/.test(s);
+        strong ? hide("err-password") : show("err-password");
+        updateStrength();
+        return strong;
+      }
+      function validatePw2() {
+        const ok = pw2.value === pw.value && pw2.value.length > 0;
+        ok ? hide("err-confirm") : show("err-confirm");
+        return ok;
+      }
+
+      [fullname, email, phone, role, pw, pw2].forEach((el) => {
+        el.addEventListener("input", () => {
+          switch (el) {
+            case fullname:
+              validateName();
+              break;
+            case email:
+              validateEmail();
+              break;
+            case phone:
+              validatePhone();
+              break;
+            case role:
+              validateRole();
+              break;
+            case pw:
+              validatePw();
+              validatePw2();
+              break;
+            case pw2:
+              validatePw2();
+              break;
+          }
+        });
+      });
+      pw.addEventListener("input", updateStrength);
+
+      function toggleType(input, btn) {
+        const isPw = input.type === "password";
+        input.type = isPw ? "text" : "password";
+        btn.setAttribute(
+          "aria-label",
+          isPw ? "Sembunyikan kata sandi" : "Tampilkan kata sandi"
+        );
+      }
+      togglePw1.addEventListener("click", () => toggleType(pw, togglePw1));
+      togglePw2.addEventListener("click", () => toggleType(pw2, togglePw2));
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const ok = [
+          validateName(),
+          validateEmail(),
+          validatePhone(),
+          validateRole(),
+          validatePw(),
+          validatePw2(),
+        ].every(Boolean);
+        if (!ok) return;
+        const payload = {
+          fullname: fullname.value.trim(),
+          email: email.value.trim(),
+          phone: phone.value.trim(),
+          role: role.value,
+          password: pw.value,
+        };
+        // TODO: ganti dengan request ke backend Anda
+        console.log("REGISTER PAYLOAD", payload);
+        // Simulasi sukses submit
+        const btn = document.getElementById("btn-register");
+        btn.disabled = true;
+        btn.textContent = "Memproses…";
+        setTimeout(() => {
+          window.location.href = "/auth/login.html?registered=1";
+        }, 900);
+      });
+    </script>
+  </body>
+</html>
