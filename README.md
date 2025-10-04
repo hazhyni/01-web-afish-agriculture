@@ -1,6 +1,6 @@
 # 🌾 Agriculture WebCommerce Platform (Under Development)
 
-A simple and intuitive platform designed to connect **agriculture suppliers** with **vendors**. The project focuses on fostering a streamlined supply chain for agricultural products, enabling better communication and business opportunities.
+A simple and intuitive platform designed to connect **agriculture farmers** with **vendors**. The project focuses on fostering a streamlined supply chain for agricultural products, enabling better communication and business opportunities.
 
 ---
 
