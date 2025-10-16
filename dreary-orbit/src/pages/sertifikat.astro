@@ -1,0 +1,677 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Sertifikat & Standar Kualitas — AgriSupply">
+  <style is:global>
+    :root {
+      --ink: #1a2e05;
+      --muted: #8b7355;
+      --brand: #f97316;
+      --secondary: #eab308;
+      --accent: #16a34a;
+      --panel: #0f1a02;
+    }
+    body {
+      background: linear-gradient(135deg, #0f1a02 0%, #1a2e05 100%);
+      color: #f7fee7;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        "Helvetica Neue",
+        Arial;
+    }
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(15, 26, 2, 0.8);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(249, 115, 22, 0.2);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .nav-brand {
+      color: #d9f99d;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    .nav-links a {
+      color: #d9f99d;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #f97316;
+    }
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .nav-actions a {
+      color: #d9f99d;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .nav-actions a:hover {
+      color: #f97316;
+    }
+    .nav .cta {
+      background: var(--brand);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .nav .cta:hover {
+      background: #ea580c;
+      transform: translateY(-1px);
+    }
+    @media (max-width: 768px) {
+      .nav-links,
+      .nav-actions a:not(.cta) {
+        display: none;
+      }
+      .nav {
+        padding: 12px 20px;
+      }
+    }
+  </style>
+
+  <div class="nav-wrap">
+    <div class="nav">
+      <a href="/" class="nav-brand">AGRISUPPLY</a>
+      <div class="nav-links">
+        <a href="/#tentang">Tentang</a>
+        <a href="/#layanan">Layanan</a>
+        <a href="/#jaringan">Jaringan</a>
+        <a href="/#kontak">Kontak</a>
+      </div>
+      <div class="nav-actions">
+        <a href="/#partnership">Partnership</a>
+        <a href="/#konsultasi" class="cta">Konsultasi</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section
+    style="padding:120px 24px 80px; background:linear-gradient(135deg, #0f1a02 0%, #1a2e05 50%, #2d4a0a 100%); position:relative"
+  >
+    <div style="max-width:1200px; margin:0 auto; text-align:center">
+      <div
+        style="color:#eab308; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.15em; margin-bottom:16px"
+      >
+        Sertifikat & Standar
+      </div>
+      <h1
+        style="font-size:clamp(40px, 7vw, 72px); font-weight:800; color:#f7fee7; line-height:1.1; margin-bottom:24px"
+      >
+        Standar Kualitas<br />Internasional
+      </h1>
+      <p
+        style="color:#d9f99d; font-size:20px; max-width:700px; margin:0 auto 40px"
+      >
+        Komitmen kami terhadap kualitas terbaik didukung oleh berbagai
+        sertifikasi internasional dan standar industri tertinggi
+      </p>
+      <a
+        href="/#kontak"
+        style="display:inline-flex; align-items:center; gap:12px; background:#f97316; color:#fff; padding:16px 32px; border-radius:10px; text-decoration:none; font-weight:700; font-size:16px; transition:all 0.2s"
+        onmouseover="this.style.background='#ea580c'; this.style.transform='translateY(-1px)'"
+        onmouseout="this.style.background='#f97316'; this.style.transform='translateY(0)'"
+      >
+        Konsultasi Sekarang 📞
+      </a>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES GRID -->
+  <section style="padding:100px 24px; background:#1a2e05">
+    <div style="max-width:1200px; margin:0 auto">
+      <h2
+        style="font-size:36px; font-weight:800; color:#f7fee7; text-align:center; margin-bottom:60px"
+      >
+        Sertifikat Resmi
+      </h2>
+
+      <div
+        style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:40px; margin-bottom:80px"
+      >
+        <div
+          style="background:rgba(22,163,74,0.1); border:2px solid rgba(22,163,74,0.3); border-radius:20px; padding:40px; text-align:center; transition:all 0.3s"
+          onmouseover="this.style.transform='scale(1.05) rotate(1deg)'; this.style.borderColor='rgba(22,163,74,0.6)'"
+          onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.borderColor='rgba(22,163,74,0.3)'"
+        >
+          <div style="font-size:64px; margin-bottom:24px">🌿</div>
+          <h3
+            style="color:#16a34a; font-weight:700; font-size:24px; margin-bottom:16px"
+          >
+            GAP Certified
+          </h3>
+          <p
+            style="color:#d9f99d; font-size:16px; line-height:1.6; margin-bottom:20px"
+          >
+            Good Agricultural Practice - Standar praktik pertanian yang baik
+            untuk memastikan produk aman dan berkualitas
+          </p>
+          <div
+            style="background:rgba(22,163,74,0.2); border-radius:8px; padding:12px; font-size:14px; color:#22c55e"
+          >
+            Berlaku: 2024-2027
+          </div>
+        </div>
+
+        <div
+          style="background:rgba(234,179,8,0.1); border:2px solid rgba(234,179,8,0.3); border-radius:20px; padding:40px; text-align:center; transition:all 0.3s"
+          onmouseover="this.style.transform='scale(1.05) rotate(-1deg)'; this.style.borderColor='rgba(234,179,8,0.6)'"
+          onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.borderColor='rgba(234,179,8,0.3)'"
+        >
+          <div style="font-size:64px; margin-bottom:24px">🌱</div>
+          <h3
+            style="color:#eab308; font-weight:700; font-size:24px; margin-bottom:16px"
+          >
+            Organic Certified
+          </h3>
+          <p
+            style="color:#d9f99d; font-size:16px; line-height:1.6; margin-bottom:20px"
+          >
+            Sertifikat organik internasional yang menjamin produk bebas dari
+            pestisida dan bahan kimia berbahaya
+          </p>
+          <div
+            style="background:rgba(234,179,8,0.2); border-radius:8px; padding:12px; font-size:14px; color:#fbbf24"
+          >
+            Berlaku: 2024-2026
+          </div>
+        </div>
+
+        <div
+          style="background:rgba(249,115,22,0.1); border:2px solid rgba(249,115,22,0.3); border-radius:20px; padding:40px; text-align:center; transition:all 0.3s"
+          onmouseover="this.style.transform='scale(1.05) rotate(1deg)'; this.style.borderColor='rgba(249,115,22,0.6)'"
+          onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.borderColor='rgba(249,115,22,0.3)'"
+        >
+          <div style="font-size:64px; margin-bottom:24px">✅</div>
+          <h3
+            style="color:#f97316; font-weight:700; font-size:24px; margin-bottom:16px"
+          >
+            Halal MUI
+          </h3>
+          <p
+            style="color:#d9f99d; font-size:16px; line-height:1.6; margin-bottom:20px"
+          >
+            Sertifikat halal dari Majelis Ulama Indonesia untuk memastikan
+            produk sesuai syariat Islam
+          </p>
+          <div
+            style="background:rgba(249,115,22,0.2); border-radius:8px; padding:12px; font-size:14px; color:#fb923c"
+          >
+            Berlaku: 2024-2025
+          </div>
+        </div>
+
+        <div
+          style="background:rgba(22,163,74,0.1); border:2px solid rgba(22,163,74,0.3); border-radius:20px; padding:40px; text-align:center; transition:all 0.3s"
+          onmouseover="this.style.transform='scale(1.05) rotate(-1deg)'; this.style.borderColor='rgba(22,163,74,0.6)'"
+          onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.borderColor='rgba(22,163,74,0.3)'"
+        >
+          <div style="font-size:64px; margin-bottom:24px">🌍</div>
+          <h3
+            style="color:#16a34a; font-weight:700; font-size:24px; margin-bottom:16px"
+          >
+            ISO 22000
+          </h3>
+          <p
+            style="color:#d9f99d; font-size:16px; line-height:1.6; margin-bottom:20px"
+          >
+            Sistem manajemen keamanan pangan internasional untuk menjamin
+            keamanan seluruh rantai pasok
+          </p>
+          <div
+            style="background:rgba(22,163,74,0.2); border-radius:8px; padding:12px; font-size:14px; color:#22c55e"
+          >
+            Berlaku: 2023-2026
+          </div>
+        </div>
+
+        <div
+          style="background:rgba(234,179,8,0.1); border:2px solid rgba(234,179,8,0.3); border-radius:20px; padding:40px; text-align:center; transition:all 0.3s"
+          onmouseover="this.style.transform='scale(1.05) rotate(1deg)'; this.style.borderColor='rgba(234,179,8,0.6)'"
+          onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.borderColor='rgba(234,179,8,0.3)'"
+        >
+          <div style="font-size:64px; margin-bottom:24px">🏭</div>
+          <h3
+            style="color:#eab308; font-weight:700; font-size:24px; margin-bottom:16px"
+          >
+            HACCP
+          </h3>
+          <p
+            style="color:#d9f99d; font-size:16px; line-height:1.6; margin-bottom:20px"
+          >
+            Hazard Analysis Critical Control Points - Sistem analisis bahaya dan
+            pengendalian titik kritis
+          </p>
+          <div
+            style="background:rgba(234,179,8,0.2); border-radius:8px; padding:12px; font-size:14px; color:#fbbf24"
+          >
+            Berlaku: 2024-2027
+          </div>
+        </div>
+
+        <div
+          style="background:rgba(249,115,22,0.1); border:2px solid rgba(249,115,22,0.3); border-radius:20px; padding:40px; text-align:center; transition:all 0.3s"
+          onmouseover="this.style.transform='scale(1.05) rotate(-1deg)'; this.style.borderColor='rgba(249,115,22,0.6)'"
+          onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.borderColor='rgba(249,115,22,0.3)'"
+        >
+          <div style="font-size:64px; margin-bottom:24px">🌐</div>
+          <h3
+            style="color:#f97316; font-weight:700; font-size:24px; margin-bottom:16px"
+          >
+            Global G.A.P.
+          </h3>
+          <p
+            style="color:#d9f99d; font-size:16px; line-height:1.6; margin-bottom:20px"
+          >
+            Standar global untuk praktik pertanian yang baik, diakui di seluruh
+            dunia untuk ekspor
+          </p>
+          <div
+            style="background:rgba(249,115,22,0.2); border-radius:8px; padding:12px; font-size:14px; color:#fb923c"
+          >
+            Berlaku: 2024-2026
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALITY METRICS -->
+  <section
+    style="padding:100px 24px; background:linear-gradient(135deg, #2d4a0a 0%, #1a2e05 100%)"
+  >
+    <div style="max-width:1200px; margin:0 auto">
+      <h2
+        style="font-size:36px; font-weight:800; color:#f7fee7; text-align:center; margin-bottom:60px"
+      >
+        Metrik Kualitas Terkini
+      </h2>
+
+      <div
+        style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:40px"
+      >
+        <div
+          style="background:rgba(22,163,74,0.1); border:1px solid rgba(22,163,74,0.2); border-radius:20px; padding:40px; text-align:center"
+        >
+          <div
+            style="font-size:48px; font-weight:800; color:#16a34a; margin-bottom:12px"
+          >
+            99.9%
+          </div>
+          <h3 style="color:#22c55e; font-weight:600; margin-bottom:8px">
+            Pass Rate
+          </h3>
+          <p style="color:#d9f99d; font-size:14px; margin:0">
+            Tingkat kelulusan inspeksi kualitas
+          </p>
+        </div>
+
+        <div
+          style="background:rgba(234,179,8,0.1); border:1px solid rgba(234,179,8,0.2); border-radius:20px; padding:40px; text-align:center"
+        >
+          <div
+            style="font-size:48px; font-weight:800; color:#eab308; margin-bottom:12px"
+          >
+            &#60; 0.01%
+          </div>
+          <h3 style="color:#fbbf24; font-weight:600; margin-bottom:8px">
+            Defect Rate
+          </h3>
+          <p style="color:#d9f99d; font-size:14px; margin:0">
+            Tingkat cacat produk
+          </p>
+        </div>
+
+        <div
+          style="background:rgba(249,115,22,0.1); border:1px solid rgba(249,115,22,0.2); border-radius:20px; padding:40px; text-align:center"
+        >
+          <div
+            style="font-size:48px; font-weight:800; color:#f97316; margin-bottom:12px"
+          >
+            100%
+          </div>
+          <h3 style="color:#fb923c; font-weight:600; margin-bottom:8px">
+            Traceability
+          </h3>
+          <p style="color:#d9f99d; font-size:14px; margin:0">
+            Kemampuan pelacakan produk
+          </p>
+        </div>
+
+        <div
+          style="background:rgba(22,163,74,0.1); border:1px solid rgba(22,163,74,0.2); border-radius:20px; padding:40px; text-align:center"
+        >
+          <div
+            style="font-size:48px; font-weight:800; color:#16a34a; margin-bottom:12px"
+          >
+            24h
+          </div>
+          <h3 style="color:#22c55e; font-weight:600; margin-bottom:8px">
+            Lab Results
+          </h3>
+          <p style="color:#d9f99d; font-size:14px; margin:0">
+            Waktu hasil uji laboratorium
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section style="padding:80px 24px; background:#0f1a02; text-align:center">
+    <div style="max-width:800px; margin:0 auto">
+      <h2
+        style="font-size:32px; font-weight:800; color:#f7fee7; margin-bottom:20px"
+      >
+        Butuh Informasi Lebih Lanjut?
+      </h2>
+      <p style="color:#d9f99d; font-size:18px; margin-bottom:40px">
+        Tim ahli kami siap membantu Anda memahami standar kualitas dan proses
+        sertifikasi
+      </p>
+      <div
+        style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap"
+      >
+        <a
+          href="/#kontak"
+          style="display:inline-flex; align-items:center; gap:12px; background:#f97316; color:#fff; padding:16px 32px; border-radius:10px; text-decoration:none; font-weight:700; font-size:16px; transition:all 0.2s"
+          onmouseover="this.style.background='#ea580c'; this.style.transform='translateY(-1px)'"
+          onmouseout="this.style.background='#f97316'; this.style.transform='translateY(0)'"
+        >
+          Hubungi Kami 📞
+        </a>
+        <a
+          href="/"
+          style="display:inline-flex; align-items:center; gap:12px; background:rgba(22,163,74,0.1); border:1px solid #16a34a; color:#16a34a; padding:16px 32px; border-radius:10px; text-decoration:none; font-weight:700; font-size:16px; transition:all 0.2s"
+          onmouseover="this.style.background='rgba(22,163,74,0.2)'"
+          onmouseout="this.style.background='rgba(22,163,74,0.1)'"
+        >
+          Kembali ke Beranda 🏠
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#0f1a02; padding:80px 24px 40px">
+    <div
+      style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:40px"
+    >
+      <div>
+        <h3
+          style="font-size:24px; font-weight:800; margin-bottom:16px; color:#f97316"
+        >
+          AGRISUPPLY
+        </h3>
+        <p style="color:#a3a3a3; line-height:1.6; margin-bottom:24px">
+          Menghubungkan petani dengan pasar global melalui teknologi modern dan
+          jaringan distribusi yang luas. Solusi rantai pasok pertanian
+          terpercaya.
+        </p>
+        <div style="display:flex; gap:16px">
+          <a
+            href="#"
+            style="width:40px; height:40px; background:rgba(249,115,22,0.1); border:1px solid rgba(249,115,22,0.2); border-radius:8px; display:flex; align-items:center; justify-content:center; color:#f97316; transition:all 0.2s"
+            onmouseover="this.style.background='rgba(249,115,22,0.2)'; this.style.transform='translateY(-2px)'"
+            onmouseout="this.style.background='rgba(249,115,22,0.1)'; this.style.transform='translateY(0)'"
+            >📧</a
+          >
+          <a
+            href="#"
+            style="width:40px; height:40px; background:rgba(249,115,22,0.1); border:1px solid rgba(249,115,22,0.2); border-radius:8px; display:flex; align-items:center; justify-content:center; color:#f97316; transition:all 0.2s"
+            onmouseover="this.style.background='rgba(249,115,22,0.2)'; this.style.transform='translateY(-2px)'"
+            onmouseout="this.style.background='rgba(249,115,22,0.1)'; this.style.transform='translateY(0)'"
+            >📱</a
+          >
+          <a
+            href="#"
+            style="width:40px; height:40px; background:rgba(249,115,22,0.1); border:1px solid rgba(249,115,22,0.2); border-radius:8px; display:flex; align-items:center; justify-content:center; color:#f97316; transition:all 0.2s"
+            onmouseover="this.style.background='rgba(249,115,22,0.2)'; this.style.transform='translateY(-2px)'"
+            onmouseout="this.style.background='rgba(249,115,22,0.1)'; this.style.transform='translateY(0)'"
+            >💬</a
+          >
+          <a
+            href="#"
+            style="width:40px; height:40px; background:rgba(249,115,22,0.1); border:1px solid rgba(249,115,22,0.2); border-radius:8px; display:flex; align-items:center; justify-content:center; color:#f97316; transition:all 0.2s"
+            onmouseover="this.style.background='rgba(249,115,22,0.2)'; this.style.transform='translateY(-2px)'"
+            onmouseout="this.style.background='rgba(249,115,22,0.1)'; this.style.transform='translateY(0)'"
+            >📺</a
+          >
+        </div>
+      </div>
+
+      <div>
+        <h4
+          style="font-size:14px; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:#f7fee7; margin-bottom:20px"
+        >
+          Layanan
+        </h4>
+        <ul style="list-style:none; padding:0; margin:0">
+          <li style="margin-bottom:12px">
+            <a
+              href="/#layanan"
+              style="color:#a3a3a3; text-decoration:none; font-size:14px; transition:color 0.2s"
+              onmouseover="this.style.color='#f97316'"
+              onmouseout="this.style.color='#a3a3a3'">Pengadaan Langsung</a
+            >
+          </li>
+          <li style="margin-bottom:12px">
+            <a
+              href="/#layanan"
+              style="color:#a3a3a3; text-decoration:none; font-size:14px; transition:color 0.2s"
+              onmouseover="this.style.color='#f97316'"
+              onmouseout="this.style.color='#a3a3a3'">Logistik & Distribusi</a
+            >
+          </li>
+          <li style="margin-bottom:12px">
+            <a
+              href="/#layanan"
+              style="color:#a3a3a3; text-decoration:none; font-size:14px; transition:color 0.2s"
+              onmouseover="this.style.color='#f97316'"
+              onmouseout="this.style.color='#a3a3a3'">Quality Assurance</a
+            >
+          </li>
+          <li style="margin-bottom:12px">
+            <a
+              href="/#layanan"
+              style="color:#a3a3a3; text-decoration:none; font-size:14px; transition:color 0.2s"
+              onmouseover="this.style.color='#f97316'"
+              onmouseout="this.style.color='#a3a3a3'">Cold Chain</a
+            >
+          </li>
+          <li style="margin-bottom:12px">
+            <a
+              href="/#layanan"
+              style="color:#a3a3a3; text-decoration:none; font-size:14px; transition:color 0.2s"
+              onmouseover="this.style.color='#f97316'"
+              onmouseout="this.style.color='#a3a3a3'">Ekspor Import</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4
+          style="font-size:14px; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:#f7fee7; margin-bottom:20px"
+        >
+          Perusahaan
+        </h4>
+        <ul style="list-style:none; padding:0; margin:0">
+          <li style="margin-bottom:12px">
+            <a
+              href="/#tentang"
+              style="color:#a3a3a3; text-decoration:none; font-size:14px; transition:color 0.2s"
+              onmouseover="this.style.color='#f97316'"
+              onmouseout="this.style.color='#a3a3a3'">Tentang Kami</a
+            >
+          </li>
+          <li style="margin-bottom:12px">
+            <a
+              href="/#tentang"
+              style="color:#a3a3a3; text-decoration:none; font-size:14px; transition:color 0.2s"
+              onmouseover="this.style.color='#f97316'"
+              onmouseout="this.style.color='#a3a3a3'">Tim</a
+            >
+          </li>
+          <li style="margin-bottom:12px">
+            <a
+              href="/#tentang"
+              style="color:#a3a3a3; text-decoration:none; font-size:14px; transition:color 0.2s"
+              onmouseover="this.style.color='#f97316'"
+              onmouseout="this.style.color='#a3a3a3'">Karir</a
+            >
+          </li>
+          <li style="margin-bottom:12px">
+            <a
+              href="/#tentang"
+              style="color:#a3a3a3; text-decoration:none; font-size:14px; transition:color 0.2s"
+              onmouseover="this.style.color='#f97316'"
+              onmouseout="this.style.color='#a3a3a3'">Berita</a
+            >
+          </li>
+          <li style="margin-bottom:12px">
+            <a
+              href="/#partnership"
+              style="color:#a3a3a3; text-decoration:none; font-size:14px; transition:color 0.2s"
+              onmouseover="this.style.color='#f97316'"
+              onmouseout="this.style.color='#a3a3a3'">Partnership</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4
+          style="font-size:14px; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:#f7fee7; margin-bottom:20px"
+        >
+          Dukungan
+        </h4>
+        <ul style="list-style:none; padding:0; margin:0">
+          <li style="margin-bottom:12px">
+            <a
+              href="/#kontak"
+              style="color:#a3a3a3; text-decoration:none; font-size:14px; transition:color 0.2s"
+              onmouseover="this.style.color='#f97316'"
+              onmouseout="this.style.color='#a3a3a3'">Pusat Bantuan</a
+            >
+          </li>
+          <li style="margin-bottom:12px">
+            <a
+              href="/#kontak"
+              style="color:#a3a3a3; text-decoration:none; font-size:14px; transition:color 0.2s"
+              onmouseover="this.style.color='#f97316'"
+              onmouseout="this.style.color='#a3a3a3'">Kontak</a
+            >
+          </li>
+          <li style="margin-bottom:12px">
+            <a
+              href="/#kontak"
+              style="color:#a3a3a3; text-decoration:none; font-size:14px; transition:color 0.2s"
+              onmouseover="this.style.color='#f97316'"
+              onmouseout="this.style.color='#a3a3a3'">FAQ</a
+            >
+          </li>
+          <li style="margin-bottom:12px">
+            <a
+              href="/sertifikat"
+              style="color:#a3a3a3; text-decoration:none; font-size:14px; transition:color 0.2s"
+              onmouseover="this.style.color='#f97316'"
+              onmouseout="this.style.color='#a3a3a3'">Dokumentasi</a
+            >
+          </li>
+          <li style="margin-bottom:12px">
+            <a
+              href="/#kontak"
+              style="color:#a3a3a3; text-decoration:none; font-size:14px; transition:color 0.2s"
+              onmouseover="this.style.color='#f97316'"
+              onmouseout="this.style.color='#a3a3a3'">Status Sistem</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      style="border-top:1px solid rgba(255,255,255,0.1); margin-top:48px; padding-top:24px; display:flex; justify-content:space-between; align-items:center; color:#a3a3a3; font-size:14px"
+    >
+      <div>© 2024 AgriSupply. All rights reserved.</div>
+      <div style="display:flex; gap:24px">
+        <a
+          href="/#kontak"
+          style="color:#a3a3a3; text-decoration:none"
+          onmouseover="this.style.color='#f97316'"
+          onmouseout="this.style.color='#a3a3a3'">Sitemap</a
+        >
+        <a
+          href="/#kontak"
+          style="color:#a3a3a3; text-decoration:none"
+          onmouseover="this.style.color='#f97316'"
+          onmouseout="this.style.color='#a3a3a3'">Accessibility</a
+        >
+        <a
+          href="/#kontak"
+          style="color:#a3a3a3; text-decoration:none"
+          onmouseover="this.style.color='#f97316'"
+          onmouseout="this.style.color='#a3a3a3'">Cookie Settings</a
+        >
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    @media (max-width: 768px) {
+      footer > div:first-child {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 32px !important;
+      }
+      footer > div:first-child > div:first-child {
+        grid-column: 1 / -1 !important;
+      }
+      footer > div:last-child {
+        flex-direction: column !important;
+        gap: 16px !important;
+        text-align: center !important;
+      }
+      footer > div:last-child > div:last-child {
+        gap: 16px !important;
+      }
+    }
+    @media (max-width: 480px) {
+      footer > div:first-child {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+      }
+    }
+  </style>
+</Layout>

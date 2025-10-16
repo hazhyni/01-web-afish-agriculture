@@ -1,0 +1,135 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BlogHero from "../components/BlogHero.astro";
+import BlogGrid from "../components/BlogGrid.astro";
+import BlogCategories from "../components/BlogCategories.astro";
+---
+
+<Layout title="Insight - Blog Edukasi Pertanian">
+  <style is:global>
+    :root {
+      --ink: #1a2e05;
+      --muted: #8b7355;
+      --brand: #f97316;
+      --secondary: #eab308;
+      --accent: #16a34a;
+      --panel: #0f1a02;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background: linear-gradient(135deg, #0f1a02 0%, #1a2e05 100%);
+      color: #f7fee7;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+    }
+  </style>
+
+  <div class="nav-wrap">
+    <div class="nav">
+      <a href="/" class="nav-brand">AGRISUPPLY</a>
+      <div class="nav-links">
+        <a href="/">Beranda</a>
+        <a href="/services">Layanan</a>
+        <a href="/insight">Insight</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#partnership">Partnership</a>
+        <a href="#konsultasi" class="cta">Konsultasi</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+
+  <style>
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(15, 26, 2, 0.8);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(249, 115, 22, 0.2);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .nav-brand {
+      color: #d9f99d;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    .nav-links a {
+      color: #d9f99d;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #f97316;
+    }
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .nav-actions a {
+      color: #d9f99d;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .nav-actions a:hover {
+      color: #f97316;
+    }
+    .nav .cta {
+      background: var(--brand);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .nav .cta:hover {
+      background: #ea580c;
+      transform: translateY(-1px);
+    }
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #d9f99d;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .nav-links,
+      .nav-actions a:not(.cta) {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .nav {
+        padding: 12px 20px;
+      }
+    }
+  </style>
+
+  <BlogHero />
+  <BlogCategories />
+  <BlogGrid />
+</Layout>

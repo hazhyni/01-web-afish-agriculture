@@ -1,0 +1,150 @@
+---
+const navItems = [
+  { id: "hero", label: "Beranda", icon: "home", href: "/" },
+  { id: "services", label: "Layanan", icon: "tractor", href: "/services" },
+  { id: "benefits", label: "Manfaat", icon: "leaf", href: "#benefits" },
+  { id: "insight", label: "Insight", icon: "lightbulb", href: "/insight" },
+  { id: "contact", label: "Kontak", icon: "envelope", href: "#contact" },
+];
+---
+
+<nav
+  id="mainNavbar"
+  class="navbar navbar-expand-lg navbar-light fixed-top"
+  style="background: rgba(40, 167, 69, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: white; border-bottom: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease;"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <i class="fas fa-leaf"></i> AgriSupply
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      <!-- Invert untuk kontras di latar hijau -->
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        {
+          navItems.map((item) => (
+            <li class="nav-item">
+              <a
+                class={item.href?.startsWith('/') ? 'nav-link' : 'nav-link smooth-scroll'}
+                href={item.href || `#${item.id}`}
+                style="color: white; transition: all 0.3s ease; padding: 0.5rem 1rem; border-radius: 12px;"
+              >
+                {item.icon && <i class={`fas fa-${item.icon} me-2`} />}
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .nav-link:hover {
+    color: #fff !important;
+    background-color: rgba(40, 167, 69, 0.4);
+    transform: translateY(-2px);
+    border-radius: 12px;
+  }
+  
+  .nav-link.active {
+    color: #fff !important;
+    background-color: rgba(40, 167, 69, 0.6);
+    font-weight: 600;
+    border-radius: 12px;
+  }
+  
+  .navbar-brand {
+    color: white !important;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    transform: scale(1.05);
+    color: #4CAF50 !important;
+  }
+  
+  .navbar-scrolled {
+    background: rgba(40, 167, 69, 0.95) !important;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  .navbar-toggler-icon {
+    background-image: none; /* Pastikan ikon toggler terlihat */
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.getElementById('mainNavbar');
+    const navLinks = document.querySelectorAll('.smooth-scroll');
+    
+    // Smooth scrolling
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        
+        if (targetSection) {
+          const offsetTop = targetSection.offsetTop - 80;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        navbar.classList.add('navbar-scrolled');
+      } else {
+        navbar.classList.remove('navbar-scrolled');
+      }
+    });
+    
+    // Active link highlighting
+    window.addEventListener('scroll', function() {
+      let current = '';
+      const sections = document.querySelectorAll('section[id]');
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
