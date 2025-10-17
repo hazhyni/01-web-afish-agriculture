@@ -1,0 +1,90 @@
+.off-canvas-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Move the menu off-screen to the left */
+  width: 250px;
+  height: 100vh;
+  background-color: #fff;
+  padding: 20px;
+  transition: left 0.5s ease-in-out;
+}
+
+.off-canvas-menu.show {
+  left: 0; /* Move the menu on-screen when the show class is added */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+.group:hover .overlay {
+  opacity: 1;
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  width: 300px; /* Set a fixed width for the cards */
+  height: 200px; /* Set a fixed height for the cards */
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+}
+.card:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+.row .card:hover {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  transform: scale(1.02);
+}
+
+.content menu1 img:hover {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  transform: scale(1.02);
+}
+
+.card-deck {
+  width: auto;
+  height: auto;
+  border-radius: 15px 20px 20px 20px;
+}
+
+/*  */
+
+.Buttton-container .text-center button {
+  border-color: #2b9c15;
+  border-width: 3px;
+}
+
+.Buttton-container .text-center button {
+  background-color: #2b9c15;
+  border: none;
+  border-radius: 33px;
+  padding-right: 33px;
+  padding-left: 33px;
+  margin-top: 45px;
+}

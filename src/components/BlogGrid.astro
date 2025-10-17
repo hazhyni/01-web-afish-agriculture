@@ -1,79 +1,29 @@
 ---
-const blogPosts = [
-  {
-    id: 1,
-    title: "Teknik Irigasi Tetes untuk Efisiensi Air",
-    excerpt: "Pelajari cara menghemat air hingga 50% dengan sistem irigasi tetes modern yang mudah diterapkan.",
-    image: "/img/rice.jpg",
-    category: "irigasi",
-    date: "15 Des 2024",
-    readTime: "5 menit",
-    author: "Dr. Sari Pertani"
-  },
-  {
-    id: 2,
-    title: "Revolusi Pertanian dengan IoT dan Sensor",
-    excerpt: "Teknologi Internet of Things mengubah cara petani memantau kondisi tanaman secara real-time.",
-    image: "/img/wheat.jpg",
-    category: "teknologi",
-    date: "12 Des 2024",
-    readTime: "7 menit",
-    author: "Ahmad Teknologi"
-  },
-  {
-    id: 3,
-    title: "Pupuk Organik dari Limbah Dapur",
-    excerpt: "Cara membuat kompos berkualitas tinggi dari sisa makanan untuk pertanian organik yang berkelanjutan.",
-    image: "/img/tea.jpg",
-    category: "organik",
-    date: "10 Des 2024",
-    readTime: "4 menit",
-    author: "Ibu Hijau"
-  },
-  {
-    id: 4,
-    title: "Optimalisasi Waktu Tanam Padi",
-    excerpt: "Strategi menentukan waktu tanam yang tepat berdasarkan cuaca dan kondisi tanah untuk hasil maksimal.",
-    image: "/img/padi.jpg",
-    category: "teknik",
-    date: "8 Des 2024",
-    readTime: "6 menit",
-    author: "Pak Tani Sukses"
-  },
-  {
-    id: 5,
-    title: "Teknologi Penyimpanan Pasca Panen",
-    excerpt: "Inovasi terbaru dalam penyimpanan hasil panen untuk meminimalkan kerugian dan menjaga kualitas.",
-    image: "/img/check.jpg",
-    category: "panen",
-    date: "5 Des 2024",
-    readTime: "8 menit",
-    author: "Dr. Pasca Panen"
-  },
-  {
-    id: 6,
-    title: "Hidroponik untuk Pemula",
-    excerpt: "Panduan lengkap memulai bertani hidroponik di rumah dengan modal minimal dan hasil maksimal.",
-    image: "/img/teh.jpg",
-    category: "teknik",
-    date: "3 Des 2024",
-    readTime: "10 menit",
-    author: "Hidro Expert"
-  }
-];
+import Button from "./Button.astro";
+import contentData from "../data/content.json";
+
+const blogPosts = contentData.articles.map(article => ({
+  id: article.id,
+  title: article.title,
+  excerpt: article.excerpt,
+  image: article.thumbnail,
+  category: article.category,
+  date: new Date(article.published_at).toLocaleDateString('id-ID', { 
+    day: 'numeric', 
+    month: 'short', 
+    year: 'numeric' 
+  }),
+  readTime: "5 menit",
+  author: article.author
+}));
 ---
 
 <section class="blog-section">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="section-title">Artikel Terbaru</h2>
-      </div>
-    </div>
-    <div class="row" id="blogGrid">
+    <h2 class="section-title">Artikel Terbaru</h2>
+    <div class="blog-grid" id="blogGrid">
       {blogPosts.map(post => (
-        <div class="col-lg-4 col-md-6 mb-4">
-          <article class="blog-card" data-category={post.category}>
+        <article class="blog-card" data-category={post.category}>
             <div class="card-image">
               <img src={post.image} alt={post.title} />
               <div class="category-badge">{post.category}</div>
@@ -89,13 +39,17 @@ const blogPosts = [
                 <div class="author">
                   <span>👨‍🌾 {post.author}</span>
                 </div>
-                <button class="read-more-btn" data-post-id={post.id}>
+                <a 
+                  href={`/artikel/${contentData.articles.find(a => a.id === post.id)?.slug}`}
+                  style="background:#f97316; color:white; padding:8px 16px; border-radius:8px; text-decoration:none; font-size:0.9rem; font-weight:600; display:inline-block; transition:all 0.3s"
+                  onmouseover="this.style.background='#ea580c'"
+                  onmouseout="this.style.background='#f97316'"
+                >
                   Baca Selengkapnya
-                </button>
+                </a>
               </div>
             </div>
-          </article>
-        </div>
+        </article>
       ))}
     </div>
   </div>
@@ -103,24 +57,35 @@ const blogPosts = [
 
 <style>
   .blog-section {
-    padding: 80px 24px;
+    padding: 60px 20px;
     background: linear-gradient(135deg, #0f1a02 0%, #1a2e05 50%, #2d4a0a 100%);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
   }
   
   .section-title {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     color: #f7fee7;
     font-weight: 800;
-    font-size: clamp(32px, 5vw, 48px);
+    font-size: clamp(28px, 4vw, 40px);
   }
   
   .blog-card {
-    background: rgba(249,115,22,0.1);
-    border: 1px solid rgba(249,115,22,0.2);
-    border-radius: 20px;
+    background: rgba(249,115,22,0.08);
+    border: 1px solid rgba(249,115,22,0.15);
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
     height: 100%;
     display: flex;
@@ -128,13 +93,14 @@ const blogPosts = [
   }
   
   .blog-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(249,115,22,0.15);
+    border-color: rgba(249,115,22,0.3);
   }
   
   .card-image {
     position: relative;
-    height: 200px;
+    height: 180px;
     overflow: hidden;
   }
   
@@ -146,24 +112,24 @@ const blogPosts = [
   }
   
   .blog-card:hover .card-image img {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   
   .category-badge {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 12px;
+    right: 12px;
     background: #f97316;
     color: white;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
     text-transform: capitalize;
   }
   
   .card-content {
-    padding: 25px;
+    padding: 20px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -172,24 +138,33 @@ const blogPosts = [
   .card-meta {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
-    font-size: 0.9rem;
-    color: #6c757d;
+    margin-bottom: 12px;
+    font-size: 0.8rem;
+    color: #a3a3a3;
   }
   
   .card-title {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
     color: #f7fee7;
     line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   
   .card-excerpt {
     color: #d9f99d;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 1.5;
+    margin-bottom: 16px;
     flex-grow: 1;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   
   .card-footer {
@@ -197,28 +172,14 @@ const blogPosts = [
     justify-content: space-between;
     align-items: center;
     margin-top: auto;
+    gap: 12px;
   }
   
   .author {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #16a34a;
     font-weight: 500;
-  }
-  
-  .read-more-btn {
-    background: #f97316;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .read-more-btn:hover {
-    background: #ea580c;
-    transform: scale(1.05);
+    flex: 1;
   }
   
   @keyframes fadeIn {
@@ -228,33 +189,34 @@ const blogPosts = [
   
   @media (max-width: 768px) {
     .blog-section {
-      padding: 60px 0;
+      padding: 40px 16px;
+    }
+    
+    .blog-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
     
     .card-footer {
       flex-direction: column;
-      gap: 10px;
-      align-items: flex-start;
+      align-items: stretch;
+      gap: 12px;
+    }
+    
+    .card-content {
+      padding: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-image {
+      height: 160px;
     }
   }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const readMoreBtns = document.querySelectorAll('.read-more-btn');
-    
-    readMoreBtns.forEach(btn => {
-      btn.addEventListener('click', function() {
-        const postId = this.dataset.postId;
-        
-        // Simple modal or alert for demo
-        alert(`Membuka artikel dengan ID: ${postId}\n\nDalam implementasi nyata, ini akan membuka halaman detail artikel.`);
-        
-        // In real implementation, you would navigate to article detail page
-        // window.location.href = `/artikel/${postId}`;
-      });
-    });
-    
     // Add loading animation
     const blogCards = document.querySelectorAll('.blog-card');
     blogCards.forEach((card, index) => {

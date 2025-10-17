@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Layout title="Sertifikat & Standar Kualitas — AgriSupply">
@@ -77,18 +78,7 @@ import Layout from "../layouts/Layout.astro";
     .nav-actions a:hover {
       color: #f97316;
     }
-    .nav .cta {
-      background: var(--brand);
-      color: #fff;
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
-    .nav .cta:hover {
-      background: #ea580c;
-      transform: translateY(-1px);
-    }
+
     @media (max-width: 768px) {
       .nav-links,
       .nav-actions a:not(.cta) {
@@ -137,14 +127,9 @@ import Layout from "../layouts/Layout.astro";
         Komitmen kami terhadap kualitas terbaik didukung oleh berbagai
         sertifikasi internasional dan standar industri tertinggi
       </p>
-      <a
-        href="/#kontak"
-        style="display:inline-flex; align-items:center; gap:12px; background:#f97316; color:#fff; padding:16px 32px; border-radius:10px; text-decoration:none; font-weight:700; font-size:16px; transition:all 0.2s"
-        onmouseover="this.style.background='#ea580c'; this.style.transform='translateY(-1px)'"
-        onmouseout="this.style.background='#f97316'; this.style.transform='translateY(0)'"
-      >
+      <Button variant="primary" href="/#kontak">
         Konsultasi Sekarang 📞
-      </a>
+      </Button>
     </div>
   </section>
 
@@ -403,22 +388,12 @@ import Layout from "../layouts/Layout.astro";
       <div
         style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap"
       >
-        <a
-          href="/#kontak"
-          style="display:inline-flex; align-items:center; gap:12px; background:#f97316; color:#fff; padding:16px 32px; border-radius:10px; text-decoration:none; font-weight:700; font-size:16px; transition:all 0.2s"
-          onmouseover="this.style.background='#ea580c'; this.style.transform='translateY(-1px)'"
-          onmouseout="this.style.background='#f97316'; this.style.transform='translateY(0)'"
-        >
+        <Button variant="primary" href="/#kontak">
           Hubungi Kami 📞
-        </a>
-        <a
-          href="/"
-          style="display:inline-flex; align-items:center; gap:12px; background:rgba(22,163,74,0.1); border:1px solid #16a34a; color:#16a34a; padding:16px 32px; border-radius:10px; text-decoration:none; font-weight:700; font-size:16px; transition:all 0.2s"
-          onmouseover="this.style.background='rgba(22,163,74,0.2)'"
-          onmouseout="this.style.background='rgba(22,163,74,0.1)'"
-        >
+        </Button>
+        <Button variant="ghost" href="/">
           Kembali ke Beranda 🏠
-        </a>
+        </Button>
       </div>
     </div>
   </section>

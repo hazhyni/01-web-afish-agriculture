@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Footer from '../components/Footer.astro';
 
 const images = [
   '/img/farm.jpg',
@@ -71,19 +73,7 @@ const images = [
     .nav-actions a:hover {
       color: var(--yellow);
     }
-    .nav .cta {
-      background: var(--brand-grad);
-      color: #071b0c;
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-weight: 700;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: transform 0.2s ease;
-    }
-    .nav .cta:hover {
-      transform: translateY(-1px);
-      color: #071b0c;
-    }
+
     
     @media (max-width: 768px) {
       .nav-links {
@@ -129,28 +119,7 @@ const images = [
       gap: 12px;
       margin-top: 20px;
     }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 18px;
-      border-radius: 10px;
-      font-weight: 700;
-      text-decoration: none;
-    }
-    .btn-primary {
-      background: var(--brand-grad);
-      color: #111;
-      box-shadow: 0 6px 20px rgba(250, 204, 21, 0.25);
-    }
-    .btn-ghost {
-      border: 1px solid rgba(234, 179, 8, 0.6);
-      color: #fff;
-    }
-    .btn-ghost:hover {
-      background: rgba(249, 115, 22, 0.12);
-      border-color: rgba(249, 115, 22, 0.85);
-    }
+
     .bullets {
       margin-top: 20px;
       color: #e5e7eb;
@@ -302,7 +271,7 @@ const images = [
       </div>
       <div class="nav-actions">
         <a href="#login">Log In</a>
-        <a href="#mulai" class="cta">Get Started</a>
+        <Button variant="primary" href="#mulai">Get Started</Button>
       </div>
     </div>
   </div>
@@ -322,8 +291,8 @@ const images = [
         lengkap untuk usaha pangan dan hortikultura.
       </p>
       <div class="actions">
-        <a class="btn btn-primary" href="#templates">Lihat Template</a>
-        <a class="btn btn-ghost" href="#demo">Coba Demo</a>
+        <Button variant="primary" href="#templates">Lihat Template</Button>
+        <Button variant="ghost" href="#demo">Coba Demo</Button>
       </div>
       <div class="bullets mt-3">
         Free trial, tanpa kartu kredit • Optimasi SEO • Integrasi WhatsApp &
@@ -416,4 +385,6 @@ const images = [
       }, 3800);
     });
   </script>
+  
+  <Footer />
 </Layout>

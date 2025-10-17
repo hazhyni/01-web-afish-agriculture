@@ -1,0 +1,187 @@
+---
+// Footer component with consistent styling
+---
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h3>AGRISUPPLY</h3>
+      <p>
+        Menghubungkan petani dengan pasar global melalui teknologi modern dan
+        jaringan distribusi yang luas. Solusi rantai pasok pertanian
+        terpercaya.
+      </p>
+      <div class="social-links">
+        <a href="#" aria-label="Email">📧</a>
+        <a href="#" aria-label="WhatsApp">📱</a>
+        <a href="#" aria-label="Chat">💬</a>
+        <a href="#" aria-label="YouTube">📺</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Layanan</h4>
+      <ul>
+        <li><a href="#layanan">Pengadaan Langsung</a></li>
+        <li><a href="#layanan">Logistik & Distribusi</a></li>
+        <li><a href="#layanan">Quality Assurance</a></li>
+        <li><a href="#layanan">Cold Chain</a></li>
+        <li><a href="#layanan">Ekspor Import</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Perusahaan</h4>
+      <ul>
+        <li><a href="#tentang">Tentang Kami</a></li>
+        <li><a href="#tentang">Tim</a></li>
+        <li><a href="#tentang">Karir</a></li>
+        <li><a href="#tentang">Berita</a></li>
+        <li><a href="#partnership">Partnership</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Dukungan</h4>
+      <ul>
+        <li><a href="#kontak">Pusat Bantuan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+        <li><a href="#kontak">FAQ</a></li>
+        <li><a href="/sertifikat">Dokumentasi</a></li>
+        <li><a href="#kontak">Status Sistem</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2024 AgriSupply. All rights reserved.</div>
+    <div class="footer-bottom-links">
+      <a href="#kontak">Sitemap</a>
+      <a href="#kontak">Accessibility</a>
+      <a href="#kontak">Cookie Settings</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #0f1a02;
+    padding: 80px 24px 40px;
+  }
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+  .footer-brand {
+    color: #f7fee7;
+  }
+  .footer-brand h3 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #f97316;
+  }
+  .footer-brand p {
+    color: #a3a3a3;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .footer-col h4 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #f7fee7;
+    margin-bottom: 20px;
+  }
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-col li {
+    margin-bottom: 12px;
+  }
+  .footer-col a {
+    color: #a3a3a3;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover {
+    color: #f97316;
+  }
+  .social-links {
+    display: flex;
+    gap: 16px;
+  }
+  .social-links a {
+    width: 40px;
+    height: 40px;
+    background: rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f97316;
+    transition: all 0.2s;
+  }
+  .social-links a:hover {
+    background: rgba(249, 115, 22, 0.2);
+    transform: translateY(-2px);
+  }
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 48px;
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #a3a3a3;
+    font-size: 14px;
+  }
+  .footer-bottom-links {
+    display: flex;
+    gap: 24px;
+  }
+  .footer-bottom-links a {
+    color: #a3a3a3;
+    text-decoration: none;
+  }
+  .footer-bottom-links a:hover {
+    color: #f97316;
+  }
+  @media (max-width: 768px) {
+    .footer {
+      padding: 60px 24px 32px;
+    }
+    .footer-content {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+    .footer-bottom-links {
+      gap: 16px;
+    }
+  }
+  @media (max-width: 480px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .social-links {
+      justify-content: center;
+    }
+  }
+</style>

@@ -1,5 +1,5 @@
 ---
-// Blog Hero Component
+import Button from "./Button.astro";
 ---
 
 <section class="hero">
@@ -10,8 +10,8 @@
       Temukan tips, teknik, dan inovasi terbaru dalam dunia pertanian untuk meningkatkan produktivitas dan keberlanjutan usaha tani Anda.
     </p>
     <div class="actions">
-      <a class="btn btn-primary" href="#artikel">Baca Artikel</a>
-      <a class="btn btn-ghost" href="#kategori">Jelajahi Kategori</a>
+      <Button variant="primary" href="#artikel">Baca Artikel</Button>
+      <Button variant="ghost" href="#kategori">Jelajahi Kategori</Button>
     </div>
     <div class="bullets">
       50+ artikel edukasi • Tips praktis • Teknologi terbaru • Panduan lengkap
@@ -85,23 +85,7 @@
     gap: 12px;
     margin-top: 20px;
   }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 18px;
-    border-radius: 10px;
-    font-weight: 700;
-    text-decoration: none;
-  }
-  .btn-primary {
-    background: var(--brand);
-    color: #fff;
-  }
-  .btn-ghost {
-    border: 1px solid var(--accent);
-    color: var(--accent);
-  }
+
   .bullets {
     margin-top: 20px;
     color: #a3a3a3;

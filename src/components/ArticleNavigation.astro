@@ -1,0 +1,53 @@
+---
+import contentData from "../data/content.json";
+
+const { currentSlug } = Astro.props;
+const articles = contentData.articles;
+const currentIndex = articles.findIndex(article => article.slug === currentSlug);
+const prevArticle = currentIndex > 0 ? articles[currentIndex - 1] : null;
+const nextArticle = currentIndex < articles.length - 1 ? articles[currentIndex + 1] : null;
+---
+
+<nav style="padding:40px 24px; background:#1a2e05; border-top:1px solid rgba(255,255,255,0.1)">
+  <div style="max-width:800px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:24px">
+    {prevArticle ? (
+      <a 
+        href={`/artikel/${prevArticle.slug}`}
+        style="background:rgba(249,115,22,0.1); border:1px solid rgba(249,115,22,0.2); border-radius:12px; padding:20px; text-decoration:none; transition:all 0.3s; display:block"
+        onmouseover="this.style.background='rgba(249,115,22,0.15)'"
+        onmouseout="this.style.background='rgba(249,115,22,0.1)'"
+      >
+        <div style="color:#a3a3a3; font-size:12px; margin-bottom:8px">← Artikel Sebelumnya</div>
+        <div style="color:#f7fee7; font-weight:600; font-size:14px">{prevArticle.title}</div>
+      </a>
+    ) : (
+      <div></div>
+    )}
+
+    {nextArticle ? (
+      <a 
+        href={`/artikel/${nextArticle.slug}`}
+        style="background:rgba(249,115,22,0.1); border:1px solid rgba(249,115,22,0.2); border-radius:12px; padding:20px; text-decoration:none; transition:all 0.3s; display:block; text-align:right"
+        onmouseover="this.style.background='rgba(249,115,22,0.15)'"
+        onmouseout="this.style.background='rgba(249,115,22,0.1)'"
+      >
+        <div style="color:#a3a3a3; font-size:12px; margin-bottom:8px">Artikel Selanjutnya →</div>
+        <div style="color:#f7fee7; font-weight:600; font-size:14px">{nextArticle.title}</div>
+      </a>
+    ) : (
+      <div></div>
+    )}
+  </div>
+</nav>
+
+<style>
+  @media (max-width: 768px) {
+    nav > div {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+    nav a {
+      text-align: left !important;
+    }
+  }
+</style>

@@ -1,0 +1,207 @@
+{
+    "meta": {
+        "category": "Agrikultur",
+        "language": "id",
+        "total_articles": 8,
+        "last_updated": "2025-10-17"
+    },
+    "articles": [
+        {
+            "id": "agri-001",
+            "title": "Transformasi Digital di Sektor Pertanian Indonesia",
+            "slug": "transformasi-digital-pertanian-indonesia",
+            "author": "Hazhiyah Yumni",
+            "published_at": "2025-09-20",
+            "category": "teknologi",
+            "tags": [
+                "digital",
+                "pertanian",
+                "supply chain",
+                "IoT"
+            ],
+            "thumbnail": "/img/wheat.jpg",
+            "excerpt": "Pertanian Indonesia mulai beradaptasi dengan teknologi digital melalui sensor IoT, sistem rantai pasok cerdas, dan aplikasi prediksi cuaca. Inovasi ini membuka peluang efisiensi dan keberlanjutan yang lebih tinggi.",
+            "content": {
+                "introduction": "Digitalisasi pertanian bukan sekadar tren, tapi kebutuhan. Dengan populasi petani yang menua, teknologi menjadi solusi untuk menjaga produktivitas dan kualitas hasil panen.",
+                "sections": [
+                    {
+                        "heading": "IoT dan Sensor Lahan",
+                        "body": "Sensor kelembapan tanah dan sistem irigasi otomatis membantu petani memantau kondisi lahan secara real-time, mengurangi pemborosan air hingga 30%."
+                    },
+                    {
+                        "heading": "Dashboard Supply Chain",
+                        "body": "Platform seperti AgriChain menyediakan transparansi dari kebun ke pasar, memastikan harga adil bagi petani dan pelaku distribusi."
+                    },
+                    {
+                        "heading": "Prediksi Panen Berbasis Data",
+                        "body": "Analisis data cuaca dan pola tanam dapat memperkirakan hasil panen dengan akurasi lebih dari 80%."
+                    }
+                ],
+                "conclusion": "Transformasi digital di sektor agrikultur akan menentukan ketahanan pangan masa depan Indonesia."
+            }
+        },
+        {
+            "id": "agri-002",
+            "title": "Sistem Pertanian Berkelanjutan: Antara Ekonomi dan Ekologi",
+            "slug": "pertanian-berkelanjutan-ekonomi-ekologi",
+            "author": "Hazhiyah Yumni",
+            "published_at": "2025-08-14",
+            "category": "organik",
+            "tags": [
+                "sustainability",
+                "ekologi",
+                "pangan"
+            ],
+            "thumbnail": "/img/tea.jpg",
+            "excerpt": "Prinsip pertanian berkelanjutan menyeimbangkan tiga pilar: ekonomi, sosial, dan lingkungan. Inilah kunci menuju ketahanan pangan yang adil.",
+            "content": {
+                "introduction": "Pertanian berkelanjutan tidak hanya soal hasil panen, tetapi juga keseimbangan alam dan kesejahteraan petani.",
+                "sections": [
+                    {
+                        "heading": "Mengurangi Penggunaan Pestisida Kimia",
+                        "body": "Penerapan pestisida nabati dan rotasi tanaman membantu menekan kerusakan tanah dan menjaga biodiversitas."
+                    },
+                    {
+                        "heading": "Ekonomi Sirkular dalam Pertanian",
+                        "body": "Limbah pertanian seperti jerami dapat diolah menjadi pupuk organik atau bahan bakar biomassa, mengurangi emisi karbon."
+                    }
+                ],
+                "conclusion": "Pertanian berkelanjutan mengajarkan bahwa produktivitas sejati tidak boleh mengorbankan masa depan lingkungan."
+            }
+        },
+        {
+            "id": "agri-003",
+            "title": "Blockchain untuk Ketelusuran Hasil Panen",
+            "slug": "blockchain-ketelusuran-hasil-panen",
+            "author": "Hazhiyah Yumni",
+            "published_at": "2025-07-05",
+            "category": "teknologi",
+            "tags": [
+                "blockchain",
+                "traceability",
+                "teknologi"
+            ],
+            "thumbnail": "/img/farm.jpg",
+            "excerpt": "Dengan blockchain, setiap tahap distribusi hasil panen bisa ditelusuri secara transparan dari kebun ke meja makan.",
+            "content": {
+                "introduction": "Konsumen semakin peduli terhadap asal-usul produk. Teknologi blockchain memungkinkan informasi perjalanan produk terekam tanpa manipulasi.",
+                "sections": [
+                    {
+                        "heading": "Sertifikasi Otomatis",
+                        "body": "Data transaksi dikonfirmasi oleh jaringan node, menjamin keaslian sertifikat organik atau fair trade."
+                    },
+                    {
+                        "heading": "Dampak bagi Petani",
+                        "body": "Dengan sistem ini, petani mendapatkan akses langsung ke pasar dan harga yang lebih kompetitif."
+                    }
+                ],
+                "conclusion": "Blockchain membuka babak baru bagi kepercayaan konsumen dan efisiensi distribusi agrikultur."
+            }
+        },
+        {
+            "id": "agri-004",
+            "title": "Teknik Irigasi Tetes untuk Efisiensi Air",
+            "slug": "teknik-irigasi-tetes-efisiensi-air",
+            "author": "Dr. Sari Pertani",
+            "published_at": "2025-06-15",
+            "category": "irigasi",
+            "tags": ["irigasi", "air", "efisiensi"],
+            "thumbnail": "/img/rice.jpg",
+            "excerpt": "Pelajari cara menghemat air hingga 50% dengan sistem irigasi tetes modern yang mudah diterapkan di lahan pertanian.",
+            "content": {
+                "introduction": "Sistem irigasi tetes adalah solusi cerdas untuk mengoptimalkan penggunaan air dalam pertanian modern.",
+                "sections": [
+                    {
+                        "heading": "Prinsip Kerja Irigasi Tetes",
+                        "body": "Air dialirkan langsung ke zona akar tanaman melalui pipa berlubang kecil, mengurangi penguapan dan pemborosan."
+                    }
+                ],
+                "conclusion": "Investasi sistem irigasi tetes akan menghemat air dan meningkatkan produktivitas jangka panjang."
+            }
+        },
+        {
+            "id": "agri-005",
+            "title": "Optimalisasi Waktu Tanam Padi",
+            "slug": "optimalisasi-waktu-tanam-padi",
+            "author": "Pak Tani Sukses",
+            "published_at": "2025-05-20",
+            "category": "teknik",
+            "tags": ["padi", "tanam", "musim"],
+            "thumbnail": "/img/padi.jpg",
+            "excerpt": "Strategi menentukan waktu tanam yang tepat berdasarkan cuaca dan kondisi tanah untuk hasil panen maksimal.",
+            "content": {
+                "introduction": "Timing adalah kunci sukses dalam budidaya padi yang menguntungkan.",
+                "sections": [
+                    {
+                        "heading": "Analisis Pola Curah Hujan",
+                        "body": "Memahami pola hujan lokal membantu menentukan waktu tanam yang optimal untuk menghindari kekeringan atau banjir."
+                    }
+                ],
+                "conclusion": "Perencanaan waktu tanam yang tepat dapat meningkatkan hasil panen hingga 25%."
+            }
+        },
+        {
+            "id": "agri-006",
+            "title": "Teknologi Penyimpanan Pasca Panen",
+            "slug": "teknologi-penyimpanan-pasca-panen",
+            "author": "Dr. Pasca Panen",
+            "published_at": "2025-04-10",
+            "category": "panen",
+            "tags": ["penyimpanan", "pasca panen", "teknologi"],
+            "thumbnail": "/img/check.jpg",
+            "excerpt": "Inovasi terbaru dalam penyimpanan hasil panen untuk meminimalkan kerugian dan menjaga kualitas produk.",
+            "content": {
+                "introduction": "Teknologi penyimpanan yang tepat dapat mengurangi losses hingga 30% dari total hasil panen.",
+                "sections": [
+                    {
+                        "heading": "Sistem Cold Storage Modern",
+                        "body": "Teknologi pendingin hemat energi dengan kontrol suhu dan kelembapan otomatis untuk berbagai jenis komoditas."
+                    }
+                ],
+                "conclusion": "Investasi teknologi penyimpanan adalah kunci meningkatkan nilai tambah produk pertanian."
+            }
+        },
+        {
+            "id": "agri-007",
+            "title": "Hidroponik untuk Pemula",
+            "slug": "hidroponik-untuk-pemula",
+            "author": "Hidro Expert",
+            "published_at": "2025-03-25",
+            "category": "teknik",
+            "tags": ["hidroponik", "urban farming", "pemula"],
+            "thumbnail": "/img/teh.jpg",
+            "excerpt": "Panduan lengkap memulai bertani hidroponik di rumah dengan modal minimal dan hasil maksimal.",
+            "content": {
+                "introduction": "Hidroponik memungkinkan bercocok tanam tanpa tanah dengan hasil yang lebih bersih dan produktif.",
+                "sections": [
+                    {
+                        "heading": "Sistem Hidroponik Sederhana",
+                        "body": "Mulai dengan sistem wick atau deep water culture yang mudah dibuat dan dirawat untuk pemula."
+                    }
+                ],
+                "conclusion": "Hidroponik adalah solusi pertanian masa depan untuk lahan terbatas."
+            }
+        },
+        {
+            "id": "agri-008",
+            "title": "Pupuk Organik dari Limbah Dapur",
+            "slug": "pupuk-organik-limbah-dapur",
+            "author": "Ibu Hijau",
+            "published_at": "2025-02-14",
+            "category": "organik",
+            "tags": ["pupuk organik", "kompos", "limbah"],
+            "thumbnail": "/img/farming.jpg",
+            "excerpt": "Cara membuat kompos berkualitas tinggi dari sisa makanan untuk pertanian organik yang berkelanjutan.",
+            "content": {
+                "introduction": "Mengubah limbah dapur menjadi pupuk organik adalah langkah kecil menuju pertanian berkelanjutan.",
+                "sections": [
+                    {
+                        "heading": "Proses Pengomposan Sederhana",
+                        "body": "Campurkan limbah hijau dan coklat dengan perbandingan 3:1, jaga kelembapan dan aerasi untuk hasil optimal."
+                    }
+                ],
+                "conclusion": "Pupuk organik buatan sendiri tidak hanya menghemat biaya tapi juga ramah lingkungan."
+            }
+        }
+    ]
+}

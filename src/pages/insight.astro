@@ -3,6 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import BlogHero from "../components/BlogHero.astro";
 import BlogGrid from "../components/BlogGrid.astro";
 import BlogCategories from "../components/BlogCategories.astro";
+import VideoSection from "../components/VideoSection.astro";
+import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Insight - Blog Edukasi Pertanian">
@@ -36,7 +39,7 @@ import BlogCategories from "../components/BlogCategories.astro";
       </div>
       <div class="nav-actions">
         <a href="#partnership">Partnership</a>
-        <a href="#konsultasi" class="cta">Konsultasi</a>
+        <Button variant="primary" href="#konsultasi">Konsultasi</Button>
       </div>
       <button class="mobile-menu-btn" aria-label="Menu">☰</button>
     </div>
@@ -95,18 +98,7 @@ import BlogCategories from "../components/BlogCategories.astro";
     .nav-actions a:hover {
       color: #f97316;
     }
-    .nav .cta {
-      background: var(--brand);
-      color: #fff;
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
-    .nav .cta:hover {
-      background: #ea580c;
-      transform: translateY(-1px);
-    }
+
     .mobile-menu-btn {
       display: none;
       background: none;
@@ -132,4 +124,6 @@ import BlogCategories from "../components/BlogCategories.astro";
   <BlogHero />
   <BlogCategories />
   <BlogGrid />
+  <VideoSection />
+  <Footer />
 </Layout>
