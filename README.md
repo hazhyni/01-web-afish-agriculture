@@ -1,39 +1,119 @@
-# 🌾 Agriculture WebCommerce Platform
+# 🌾 AgriSupply — Integrated Agriculture Supply Chain Solution
 
-A simple and intuitive platform designed to connect **agriculture farmers** with **vendors**. The project focuses on fostering a streamlined supply chain for agricultural products, enabling better communication and business opportunities.
+**AgriSupply** is a web-based platform that streamlines and digitalizes the agricultural and fishery supply chain — from farmers to distributors, retailers, and consumers.
+The goal is to create a transparent, efficient, and sustainable ecosystem that ensures quality, traceability, and fair trade for every stakeholder.
 
 ---
 
 ## 🚀 Features
 
-- **Farmer Dashboard**:  
-  Farmer can list products, manage inventory, and track orders.
-- **Vendor Dashboard**:  
-  Vendors can browse products, place orders, and review Farmer.
-- **Secure User Authentication**:  
-  Both suppliers and vendors have secure, role-based logins.
-- **Search and Filter**:  
-  Vendors can search for products by category, location, and availability.
-- **Order Management**:  
-  Vendors can track order statuses, and suppliers can confirm or reject orders.
-- **Messaging System**:  
-  Built-in messaging to facilitate communication between suppliers and vendors.
+### 🧭 Integrated Supply Chain Services
+
+* **Procurement Management** — Real-time sourcing and purchasing system for agricultural & fishery products.
+* **Logistics & Distribution** — Optimized delivery network using cold chain tracking and live status monitoring.
+* **Quality Assurance** — End-to-end inspection process with lab certification and standardized traceability.
+
+### 🧑‍🌾 Farmer-to-Table Ecosystem
+
+* Empowering local farmers with direct access to markets.
+* Transparent price tracking and demand-based distribution.
+* Data-driven quality monitoring and 24/7 traceability.
+
+### 🚚 Advanced Distribution Network
+
+* Multi-stage distribution (Procurement → Cold Storage → Packaging → Delivery).
+* Automated scheduling for logistic partners.
+* Temperature monitoring and route optimization.
+
+### 🧪 International Quality Standards
+
+* Follows **GAP (Good Agricultural Practices)** and **Organic Certification**.
+* Laboratory testing, field inspection, and product grading system.
+* Dashboard monitoring for inspection results and compliance metrics.
 
 ---
 
-## 🛠️ Tech Stack
+## 🌍 Strategic Partnerships
 
-- **Frontend**: React.js (or any preferred framework)
-- **Backend**: Node.js with Express.js
-- **Database**: MongoDB (or any preferred database)
-- **Styling**: TailwindCSS
-- **Authentication**: JWT-based authentication system
+AgriSupply collaborates with global and local partners to expand agricultural reach and technology adoption:
+
+* 50+ Partner Regions
+* 200+ Certified Farmers
+* 1000+ Distributed Products
+* 24/7 Cold Chain Logistics Network
 
 ---
 
-## 🖥️ Setup and Installation
+## 💡 Tech Stack
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/hazhyni/projects-afish-master.git
-   ```
+| Category               | Technology                                        |
+| ---------------------- | ------------------------------------------------- |
+| **Frontend**           | Astro, Tailwind CSS, HTML5, JavaScript            |
+| **Backend (optional)** | Node.js / Express.js                              |
+| **Database**           | Firebase / MongoDB (depending on setup)           |
+| **Hosting**            | Netlify                                  |
+| **Images**             | Unsplash API (randomized agriculture backgrounds) |
+
+---
+
+## 📂 Folder Structure
+
+```
+agrisupply/
+├── public/
+│   ├── images/
+│   ├── icons/
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   ├── layouts/
+│   ├── pages/
+│   └── styles/
+├── package.json
+├── README.md
+└── astro.config.mjs
+```
+
+---
+
+## 📰 Blog JSON (Sample)
+
+```json
+[
+  {
+    "title": "The Rise of Digital Agriculture",
+    "author": "AgriSupply Team",
+    "date": "2025-10-18",
+    "category": "Innovation",
+    "content": "Digital tools are reshaping how farmers produce, track, and sell their crops..."
+  },
+  {
+    "title": "Cold Chain Logistics Explained",
+    "author": "AgriSupply Insight",
+    "date": "2025-10-10",
+    "category": "Logistics",
+    "content": "Maintaining freshness through smart temperature-controlled networks..."
+  }
+]
+```
+
+---
+
+## 🧭 Roadmap
+
+* [x] Landing Page UI Design
+* [x] Integrated Blog JSON
+* [ ] Dashboard for Supply Chain Monitoring
+* [ ] Farmer Registration & Authentication
+* [ ] Real-time Cold Storage Analytics
+* [ ] Admin Panel for Product Inspection
+
+---
+
+## 🪴 License
+
+This project is licensed under the **MIT License** — feel free to use, modify, and contribute for educational and open-source purposes.
+
+---
+
+Would you like me to make the README bilingual (English + Bahasa Indonesia) next, so it fits both your portfolio and local audiences?
