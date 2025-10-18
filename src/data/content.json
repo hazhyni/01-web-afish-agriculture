@@ -105,7 +105,11 @@
             "author": "Dr. Sari Pertani",
             "published_at": "2025-06-15",
             "category": "irigasi",
-            "tags": ["irigasi", "air", "efisiensi"],
+            "tags": [
+                "irigasi",
+                "air",
+                "efisiensi"
+            ],
             "thumbnail": "/img/rice.jpg",
             "excerpt": "Pelajari cara menghemat air hingga 50% dengan sistem irigasi tetes modern yang mudah diterapkan di lahan pertanian.",
             "content": {
@@ -126,7 +130,11 @@
             "author": "Pak Tani Sukses",
             "published_at": "2025-05-20",
             "category": "teknik",
-            "tags": ["padi", "tanam", "musim"],
+            "tags": [
+                "padi",
+                "tanam",
+                "musim"
+            ],
             "thumbnail": "/img/padi.jpg",
             "excerpt": "Strategi menentukan waktu tanam yang tepat berdasarkan cuaca dan kondisi tanah untuk hasil panen maksimal.",
             "content": {
@@ -147,7 +155,11 @@
             "author": "Dr. Pasca Panen",
             "published_at": "2025-04-10",
             "category": "panen",
-            "tags": ["penyimpanan", "pasca panen", "teknologi"],
+            "tags": [
+                "penyimpanan",
+                "pasca panen",
+                "teknologi"
+            ],
             "thumbnail": "/img/check.jpg",
             "excerpt": "Inovasi terbaru dalam penyimpanan hasil panen untuk meminimalkan kerugian dan menjaga kualitas produk.",
             "content": {
@@ -168,7 +180,11 @@
             "author": "Hidro Expert",
             "published_at": "2025-03-25",
             "category": "teknik",
-            "tags": ["hidroponik", "urban farming", "pemula"],
+            "tags": [
+                "hidroponik",
+                "urban farming",
+                "pemula"
+            ],
             "thumbnail": "/img/teh.jpg",
             "excerpt": "Panduan lengkap memulai bertani hidroponik di rumah dengan modal minimal dan hasil maksimal.",
             "content": {
@@ -189,8 +205,12 @@
             "author": "Ibu Hijau",
             "published_at": "2025-02-14",
             "category": "organik",
-            "tags": ["pupuk organik", "kompos", "limbah"],
-            "thumbnail": "/img/farming.jpg",
+            "tags": [
+                "pupuk organik",
+                "kompos",
+                "limbah"
+            ],
+            "thumbnail": "/img/farmlimbah.png",
             "excerpt": "Cara membuat kompos berkualitas tinggi dari sisa makanan untuk pertanian organik yang berkelanjutan.",
             "content": {
                 "introduction": "Mengubah limbah dapur menjadi pupuk organik adalah langkah kecil menuju pertanian berkelanjutan.",

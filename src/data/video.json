@@ -1,0 +1,31 @@
+{
+    "videos": [
+        {
+            "id": "video-001",
+            "title": "Teknik Irigasi Tetes Modern",
+            "thumbnail": "/img/rice.jpg",
+            "duration": "8:45",
+            "category": "irigasi",
+            "description": "Pelajari cara menghemat air hingga 50% dengan sistem irigasi tetes yang mudah diterapkan.",
+            "embedId": "dQw4w9WgXcQ"
+        },
+        {
+            "id": "video-002",
+            "title": "Hidroponik untuk Pemula",
+            "thumbnail": "/img/teh.jpg",
+            "duration": "12:30",
+            "category": "teknik",
+            "description": "Panduan lengkap memulai bertani hidroponik di rumah dengan modal minimal.",
+            "embedId": "dQw4w9WgXcQ"
+        },
+        {
+            "id": "video-003",
+            "title": "Pupuk Organik dari Limbah Dapur",
+            "thumbnail": "/img/farmlimbah.png",
+            "duration": "6:15",
+            "category": "organik",
+            "description": "Cara membuat kompos berkualitas tinggi dari sisa makanan untuk pertanian organik.",
+            "embedId": "dQw4w9WgXcQ"
+        }
+    ]
+}

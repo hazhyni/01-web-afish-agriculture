@@ -1,0 +1,189 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout title="Tentang Kami - AgriSupply">
+  <style is:global>
+    :root {
+      --ink: #1a2e05;
+      --brand: #f97316;
+      --secondary: #eab308;
+      --accent: #16a34a;
+    }
+    body {
+      background: linear-gradient(135deg, #0f1a02 0%, #1a2e05 100%);
+      color: #f7fee7;
+      font-family: Inter, ui-sans-serif, system-ui;
+    }
+  </style>
+
+  <Navbar />
+
+  <!-- Hero Section -->
+  <section style="padding:80px 24px; background:linear-gradient(135deg, #1a2e05 0%, #2d4a0a 100%); text-align:center">
+    <div style="max-width:800px; margin:0 auto">
+      <div style="color:#eab308; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.15em; margin-bottom:16px">
+        Tentang AgriSupply
+      </div>
+      <h1 style="font-size:clamp(36px, 6vw, 64px); font-weight:800; color:#f7fee7; line-height:1.1; margin-bottom:24px">
+        Membangun Masa Depan<br />Pertanian Indonesia
+      </h1>
+      <p style="color:#d9f99d; font-size:20px; line-height:1.6; margin-bottom:40px">
+        Sejak 2009, kami berkomitmen menghubungkan petani dengan pasar global melalui teknologi modern dan jaringan distribusi yang luas.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section style="padding:80px 24px; background:#0f1a02">
+    <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center">
+      <div>
+        <h2 style="color:#f97316; font-size:36px; font-weight:800; margin-bottom:24px">Visi & Misi</h2>
+        <div style="margin-bottom:40px">
+          <h3 style="color:#eab308; font-size:20px; font-weight:700; margin-bottom:12px">🎯 Visi</h3>
+          <p style="color:#d9f99d; line-height:1.6">
+            Menjadi platform rantai pasok pertanian terdepan di Asia Tenggara yang menghubungkan petani dengan pasar global.
+          </p>
+        </div>
+        <div>
+          <h3 style="color:#16a34a; font-size:20px; font-weight:700; margin-bottom:12px">🚀 Misi</h3>
+          <ul style="color:#d9f99d; line-height:1.6; padding-left:20px">
+            <li>Meningkatkan kesejahteraan petani melalui akses pasar yang adil</li>
+            <li>Menyediakan produk pertanian berkualitas tinggi untuk konsumen</li>
+            <li>Mengoptimalkan rantai pasok dengan teknologi modern</li>
+          </ul>
+        </div>
+      </div>
+      <div style="background:rgba(249,115,22,0.1); border-radius:20px; padding:40px; text-align:center">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px">
+          <div>
+            <div style="font-size:48px; font-weight:800; color:#f97316; margin-bottom:8px">15+</div>
+            <div style="color:#d9f99d; font-size:14px">Tahun Pengalaman</div>
+          </div>
+          <div>
+            <div style="font-size:48px; font-weight:800; color:#eab308; margin-bottom:8px">500+</div>
+            <div style="color:#d9f99d; font-size:14px">Petani Mitra</div>
+          </div>
+          <div>
+            <div style="font-size:48px; font-weight:800; color:#16a34a; margin-bottom:8px">50+</div>
+            <div style="color:#d9f99d; font-size:14px">Kota Terjangkau</div>
+          </div>
+          <div>
+            <div style="font-size:48px; font-weight:800; color:#f97316; margin-bottom:8px">95%</div>
+            <div style="color:#d9f99d; font-size:14px">Kepuasan Klien</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section style="padding:80px 24px; background:#1a2e05">
+    <div style="max-width:1200px; margin:0 auto">
+      <h2 style="text-align:center; color:#f7fee7; font-size:36px; font-weight:800; margin-bottom:60px">
+        Tim Kami
+      </h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:40px">
+        <div style="background:rgba(249,115,22,0.1); border:1px solid rgba(249,115,22,0.2); border-radius:20px; padding:30px; text-align:center">
+          <div style="width:80px; height:80px; background:#f97316; border-radius:50%; margin:0 auto 20px; display:flex; align-items:center; justify-content:center; font-size:32px">
+            👨‍🌾
+          </div>
+          <h3 style="color:#f7fee7; font-size:20px; font-weight:700; margin-bottom:8px">Dr. Ahmad Pertani</h3>
+          <p style="color:#f97316; font-size:14px; font-weight:600; margin-bottom:12px">CEO & Founder</p>
+          <p style="color:#d9f99d; font-size:14px; line-height:1.5">
+            15+ tahun pengalaman di bidang agribisnis dan supply chain management.
+          </p>
+        </div>
+        
+        <div style="background:rgba(234,179,8,0.1); border:1px solid rgba(234,179,8,0.2); border-radius:20px; padding:30px; text-align:center">
+          <div style="width:80px; height:80px; background:#eab308; border-radius:50%; margin:0 auto 20px; display:flex; align-items:center; justify-content:center; font-size:32px">
+            👩‍💼
+          </div>
+          <h3 style="color:#f7fee7; font-size:20px; font-weight:700; margin-bottom:8px">Sari Teknologi</h3>
+          <p style="color:#eab308; font-size:14px; font-weight:600; margin-bottom:12px">CTO</p>
+          <p style="color:#d9f99d; font-size:14px; line-height:1.5">
+            Ahli teknologi pertanian dengan fokus pada IoT dan sistem distribusi cerdas.
+          </p>
+        </div>
+        
+        <div style="background:rgba(22,163,74,0.1); border:1px solid rgba(22,163,74,0.2); border-radius:20px; padding:30px; text-align:center">
+          <div style="width:80px; height:80px; background:#16a34a; border-radius:50%; margin:0 auto 20px; display:flex; align-items:center; justify-content:center; font-size:32px">
+            👨‍💻
+          </div>
+          <h3 style="color:#f7fee7; font-size:20px; font-weight:700; margin-bottom:8px">Budi Logistik</h3>
+          <p style="color:#16a34a; font-size:14px; font-weight:600; margin-bottom:12px">Head of Operations</p>
+          <p style="color:#d9f99d; font-size:14px; line-height:1.5">
+            Spesialis cold chain dan sistem distribusi nasional dengan track record solid.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section style="padding:80px 24px; background:linear-gradient(135deg, #2d4a0a 0%, #1a2e05 100%)">
+    <div style="max-width:1200px; margin:0 auto">
+      <h2 style="text-align:center; color:#f7fee7; font-size:36px; font-weight:800; margin-bottom:60px">
+        Nilai-Nilai Kami
+      </h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px">
+        <div style="text-align:center; padding:30px">
+          <div style="font-size:48px; margin-bottom:20px">🌱</div>
+          <h3 style="color:#16a34a; font-size:20px; font-weight:700; margin-bottom:16px">Keberlanjutan</h3>
+          <p style="color:#d9f99d; line-height:1.6">
+            Berkomitmen pada praktik pertanian berkelanjutan yang menjaga lingkungan untuk generasi mendatang.
+          </p>
+        </div>
+        
+        <div style="text-align:center; padding:30px">
+          <div style="font-size:48px; margin-bottom:20px">🤝</div>
+          <h3 style="color:#eab308; font-size:20px; font-weight:700; margin-bottom:16px">Kemitraan</h3>
+          <p style="color:#d9f99d; line-height:1.6">
+            Membangun hubungan jangka panjang yang saling menguntungkan dengan semua stakeholder.
+          </p>
+        </div>
+        
+        <div style="text-align:center; padding:30px">
+          <div style="font-size:48px; margin-bottom:20px">⚡</div>
+          <h3 style="color:#f97316; font-size:20px; font-weight:700; margin-bottom:16px">Inovasi</h3>
+          <p style="color:#d9f99d; line-height:1.6">
+            Terus mengadopsi teknologi terbaru untuk meningkatkan efisiensi dan kualitas layanan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section style="padding:80px 24px; background:#0f1a02; text-align:center">
+    <div style="max-width:800px; margin:0 auto">
+      <h2 style="color:#f7fee7; font-size:32px; font-weight:800; margin-bottom:20px">
+        Bergabung dengan Kami
+      </h2>
+      <p style="color:#d9f99d; font-size:18px; margin-bottom:40px">
+        Mari bersama membangun ekosistem pertanian yang lebih baik untuk Indonesia
+      </p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap">
+        <Button variant="primary" href="#kontak">Hubungi Kami</Button>
+        <Button variant="ghost" href="/services">Lihat Layanan</Button>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  @media (max-width: 768px) {
+    section > div {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+    nav > div > div:last-child {
+      display: none;
+    }
+  }
+</style>

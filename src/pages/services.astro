@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
 import Button from '../components/Button.astro';
 import Footer from '../components/Footer.astro';
 
@@ -17,72 +18,16 @@ const images = [
 <Layout title="Services - AGRISPACE">
   <style>
     :root {
-      --brand-grad: linear-gradient(135deg, #facc15 0%, #f97316 100%);
-      --yellow: #facc15;
+      --brand-grad: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+      --yellow: #22c55e;
     }
     
-    .nav-wrap {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    body {
+      background: linear-gradient(135deg, #0f1a02 0%, #1a2e05 100%);
+      color: #f7fee7;
     }
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px clamp(20px, 5vw, 80px);
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-    .nav-brand {
-      font-size: 20px;
-      font-weight: 800;
-      color: #fff;
-      text-decoration: none;
-      letter-spacing: -0.02em;
-    }
-    .nav-links {
-      display: flex;
-      gap: 32px;
-    }
-    .nav-links a {
-      color: #e5e7eb;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-    .nav-links a:hover {
-      color: var(--yellow);
-    }
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .nav-actions a {
-      color: #e5e7eb;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-    .nav-actions a:hover {
-      color: var(--yellow);
-    }
+    
 
-    
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-      .nav {
-        padding: 12px 20px;
-      }
-    }
 
     /* HERO */
     .hero {
@@ -91,7 +36,7 @@ const images = [
       grid-template-columns: 1.2fr 1fr;
     }
     .hero-left {
-      background: #000;
+      background: linear-gradient(135deg, #0f1a02 0%, #1a2e05 100%);
       display: grid;
       align-content: center;
       padding: clamp(24px, 6vw, 120px);
@@ -108,9 +53,10 @@ const images = [
       line-height: 0.98;
       font-weight: 800;
       letter-spacing: -0.02em;
+      color: #f7fee7;
     }
     .lead {
-      color: #cbd5e1;
+      color: #d9f99d;
       font-size: clamp(16px, 1.6vw, 22px);
       max-width: 56ch;
     }
@@ -119,10 +65,18 @@ const images = [
       gap: 12px;
       margin-top: 20px;
     }
+    
+    .actions button, .actions a {
+      transition: all 0.3s ease;
+    }
+    
+    .actions button:hover, .actions a:hover {
+      transform: translateY(-2px);
+    }
 
     .bullets {
       margin-top: 20px;
-      color: #e5e7eb;
+      color: #a3a3a3;
       font-size: 14px;
     }
     .bullets b {
@@ -134,16 +88,16 @@ const images = [
       position: relative;
       overflow: hidden;
       background: radial-gradient(
-          900px 420px at 100% 0%,
-          rgba(22, 163, 74, 0.2),
+          800px 400px at 100% 0%,
+          rgba(34, 197, 94, 0.2),
           transparent
         ),
         radial-gradient(
           700px 380px at 0% 100%,
-          rgba(234, 179, 8, 0.14),
+          rgba(22, 163, 74, 0.1),
           transparent
         ),
-        #0a0a0a;
+        #1a2e05;
     }
     .stack {
       position: absolute;
@@ -157,14 +111,20 @@ const images = [
       aspect-ratio: 16/10;
       border-radius: 18px;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      box-shadow:
-        0 30px 60px rgba(0, 0, 0, 0.45),
-        0 0 0 1px rgba(234, 179, 8, 0.15) inset;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
       transform-origin: center;
       opacity: 0.95;
-      background: #111;
+      background: #2d4a0a;
       animation: floatY 9s ease-in-out infinite var(--delay, 0ms);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .frame:hover {
+      transform: scale(1.05);
+      box-shadow: 0 40px 80px rgba(34, 197, 94, 0.2);
+      border-color: rgba(34, 197, 94, 0.6);
     }
     .frame img {
       width: 100%;
@@ -204,8 +164,7 @@ const images = [
       height: 220px;
       border-radius: 14px;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(34, 197, 94, 0.2);
     }
     .strip .thumb img {
       width: 100%;
@@ -260,21 +219,7 @@ const images = [
     }
   </style>
 
-  <div class="nav-wrap">
-    <div class="nav">
-      <a href="/" class="nav-brand">AGRISPACE</a>
-      <div class="nav-links">
-        <a href="#produk">Produk</a>
-        <a href="#fitur">Fitur</a>
-        <a href="#harga">Harga</a>
-        <a href="#resources">Resources</a>
-      </div>
-      <div class="nav-actions">
-        <a href="#login">Log In</a>
-        <Button variant="primary" href="#mulai">Get Started</Button>
-      </div>
-    </div>
-  </div>
+  <Navbar />
 
   <!-- HERO ala Squarespace: teks besar kiri, kolase bergerak kanan -->
   <section class="hero">
@@ -336,32 +281,54 @@ const images = [
     </div>
   </section>
 
-  <!-- Placeholder sections -->
+  <!-- Interactive Features Section -->
   <section
     id="fitur"
-    style="padding:80px 24px; background:#0a0a0a; border-top:1px solid rgba(255,255,255,.06)"
+    style="padding:80px 24px; background:#1a2e05; border-top:1px solid rgba(34,197,94,.2)"
   >
     <div style="max-width:1100px; margin:0 auto">
-      <h2 style="font-size:36px; font-weight:800; letter-spacing:-.02em">
+      <h2 style="font-size:36px; font-weight:800; letter-spacing:-.02em; color:#f7fee7; text-align:center; margin-bottom:48px">
         Fitur untuk rantai pasok
       </h2>
-      <div class="row g-4 mt-2">
-        <div class="col-md-4">
-          <p class="text-secondary">Dasbor harga & stok real‑time</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:32px">
+        <div class="feature-card" style="padding:32px; background:rgba(34,197,94,0.1); border-radius:16px; border:1px solid rgba(34,197,94,0.2); cursor:pointer; transition:all 0.3s ease">
+          <div style="font-size:48px; margin-bottom:16px">📊</div>
+          <h3 style="color:#22c55e; font-weight:700; margin-bottom:12px">Dasbor Real-time</h3>
+          <p style="color:#d9f99d; margin:0; line-height:1.6">Monitor harga & stok secara real-time dengan dashboard interaktif</p>
         </div>
-        <div class="col-md-4">
-          <p class="text-secondary">Pelacakan pengiriman & suhu</p>
+        <div class="feature-card" style="padding:32px; background:rgba(34,197,94,0.1); border-radius:16px; border:1px solid rgba(34,197,94,0.2); cursor:pointer; transition:all 0.3s ease">
+          <div style="font-size:48px; margin-bottom:16px">🚚</div>
+          <h3 style="color:#22c55e; font-weight:700; margin-bottom:12px">Pelacakan Pengiriman</h3>
+          <p style="color:#d9f99d; margin:0; line-height:1.6">Tracking pengiriman & monitoring suhu untuk menjaga kualitas</p>
         </div>
-        <div class="col-md-4">
-          <p class="text-secondary">Katalog produk hasil panen</p>
+        <div class="feature-card" style="padding:32px; background:rgba(34,197,94,0.1); border-radius:16px; border:1px solid rgba(34,197,94,0.2); cursor:pointer; transition:all 0.3s ease">
+          <div style="font-size:48px; margin-bottom:16px">🌾</div>
+          <h3 style="color:#22c55e; font-weight:700; margin-bottom:12px">Katalog Produk</h3>
+          <p style="color:#d9f99d; margin:0; line-height:1.6">Katalog lengkap hasil panen dengan detail kualitas dan asal</p>
         </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Call to Action Section -->
+  <section style="padding:80px 24px; background:#0f1a02; text-align:center">
+    <div style="max-width:800px; margin:0 auto">
+      <h2 style="color:#f7fee7; font-size:32px; font-weight:800; margin-bottom:20px">
+        Siap Memulai?
+      </h2>
+      <p style="color:#d9f99d; font-size:18px; margin-bottom:40px">
+        Bergabunglah dengan ratusan petani dan distributor yang telah mempercayai layanan kami
+      </p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap">
+        <Button variant="primary" href="#kontak">Mulai Sekarang</Button>
+        <Button variant="ghost" href="#demo">Lihat Demo</Button>
       </div>
     </div>
   </section>
 
   <script>
-    // Optional: swap images in frames setiap beberapa detik biar terasa "hidup"
     document.addEventListener("DOMContentLoaded", () => {
+      // Image rotation for frames
       const list = Array.from(document.querySelectorAll(".frame img"));
       const pool = [
         "/img/farm.jpg",
@@ -383,6 +350,22 @@ const images = [
           target.style.opacity = "1";
         }, 320);
       }, 3800);
+      
+      // Feature cards hover effects
+      const featureCards = document.querySelectorAll('.feature-card');
+      featureCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          (card as HTMLElement).style.transform = 'translateY(-8px)';
+          (card as HTMLElement).style.boxShadow = '0 20px 40px rgba(34, 197, 94, 0.2)';
+          (card as HTMLElement).style.borderColor = 'rgba(34, 197, 94, 0.4)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+          (card as HTMLElement).style.transform = 'translateY(0)';
+          (card as HTMLElement).style.boxShadow = 'none';
+          (card as HTMLElement).style.borderColor = 'rgba(34, 197, 94, 0.2)';
+        });
+      });
     });
   </script>
   
