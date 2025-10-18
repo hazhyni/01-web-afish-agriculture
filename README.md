@@ -1,7 +1,3 @@
-Perfect — that screenshot is clearly a landing page for **AgriSupply**, your agriculture/fishery supply chain web project. I’ll draft you a professional and appealing **GitHub README.md** file for it. It’ll look clean, modern, and ready for portfolio display.
-
----
-
 # 🌾 AgriSupply — Integrated Agriculture Supply Chain Solution
 
 **AgriSupply** is a web-based platform that streamlines and digitalizes the agricultural and fishery supply chain — from farmers to distributors, retailers, and consumers.
