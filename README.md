@@ -3,6 +3,7 @@
 **AgriSupply** is a web-based platform that streamlines and digitalizes the agricultural and fishery supply chain — from farmers to distributors, retailers, and consumers.
 The goal is to create a transparent, efficient, and sustainable ecosystem that ensures quality, traceability, and fair trade for every stakeholder.
 
+[Demo](https://agrisupply-yumni.netlify.app/)
 ---
 
 ## 🚀 Features
